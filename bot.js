@@ -125,47 +125,28 @@ client.login(process.env.TOKEN)
 
 //-----------------------KOMUTLAR-----------------------\\
 
-//KULLANICI KAYIT MESAJI\\
+//ANTİ RAİD
 
 client.on("guildMemberAdd", async member => {
-  let hgmesajı = db.fetch(`kgirismesajı_${member.guild.id}`)
-  client.channels.cache.get(hgmesajı).send(`Hoşgeldin ${member} Kayıt Olmak İçin !kayıt İsim Yaş`);
+let kanal = await db.fetch(`antiraidK_${member.guild.id}`)== "anti-raid-aç"
+  if (!kanal) return;  
+  var darknesyt = member.guild.owner
+  if (member.user.bot === true) {
+     if (db.fetch(`botizin_${member.guild.id}.${member.id}`) == "aktif") {
+    let darknesguardv2 = new Discord.MessageEmbed()
+      .setColor("RANDOM")
+      .setThumbnail(member.user.avatarURL())
+      .setDescription(`**${member.user.tag}** (${member.id}) adlı bota bir yetkili izin verdi eğer kaldırmak istiyorsanız **!bot-izni kaldır <botid>**.`);
+    darknesyt.send(darknesguardv2);
+     } else {
+       let izinverilmemişbot = new Discord.MessageEmbed()
+      .setColor("RANDOM")
+      .setThumbnail(member.user.avatarURL())
+      .setDescription("**" + member.user.tag +"**" + " (" + member.id+ ") " + "adlı bot sunucuya eklendi ve banladım eğer izin vermek istiyorsanız **" + "!bot-izni ver <botid>**")
+       member.ban();// Eğer sunucudan atmak istiyorsanız ban kısmını kick yapın
+       darknesyt.send(izinverilmemişbot)
+}
+  }
 });
 
-//KULLANICI KAYIT MESAJI SON\\
-
-
-//KULLANICI KAYIT MESAJI\\
-
-client.on("guildMemberAdd", async member => {
-  let yetkilihgmesajı = db.fetch(`yetkilikgirismesajı_${member.guild.id}`)
-  client.channels.cache.get(yetkilihgmesajı).send(`Hoşgeldin ${member} Kayıt Olmak İçin Kayıt Kanalına İsmini Yaz Ve Yetkilileri Bekle!`);
-});
-
-//KULLANICI KAYIT MESAJI SON\\
-
-  client.on("guildMemberAdd", member => { 
-  let kanal = db.fetch(`hgbbkanal_${member.guild.id}`)
-  let user = client.users.cache.get(member.id);
-  require("moment-duration-format");
-  const kurulus = new Date().getTime() - user.createdAt.getTime();  
-  const embed = new Discord.MessageEmbed()
-  var kontrol;
-if (kurulus < 1296000000) kontrol = ' **__Bu Hesap Güvenilir Değil__** '
-if (kurulus > 1296000000) kontrol = ' **__Bu Hesap Güvenilir Gözüküyor__** '
-  moment.locale("tr");
-  let codework = client.channels.cache.get(kanal);
-codework.send(`
-<a:RainbowOkGif:755739732666744843> ** Hoşgeldin! ${member} Seninle Birlikte ${member.guild.memberCount} Kişiyiz. **
-
-<a:RainbowOkGif:755739732666744843> ** Sunucuya Hoşgeldin Tagımızı Alarak Kayıt Olabilirsin. **
-
-<a:RainbowOkGif:755739732666744843> ** <@&748076408672354369> seninle ilgilenicektir. **
-
-<a:RainbowOkGif:755739732666744843> ** Hesabın Oluşturulma Tarihi:** ${moment(member.user.createdAt).format(" **YYYY __DD MMMM dddd (hh:mm:ss) __ **")} **
-
-<a:RainbowOkGif:755739732666744843> ** ${kontrol} **
-
-<a:RainbowOkGif:755739732666744843> ** __ Register Odalara Girerek Kayıt Olman Lazım Dostum . __  `)
-  
-  });
+//ANTİ RAİD SON
