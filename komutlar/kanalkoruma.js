@@ -8,7 +8,7 @@ if(!kanal){
   const embed = new Discord.MessageEmbed()
     .setColor("BLACK")
   .setFooter(client.user.username, client.user.avatarURL())
-  .setDescription(`Lütfen log kanalını etiketleyiniz!`)
+  .setDescription(`Lütfen log kanalını etiketleyiniz, Sistem Otomatik Olarak Aktif Olacaktır.`)
   message.channel.send(embed)
   return
 }
@@ -16,7 +16,7 @@ if(!kanal){
   const embed = new Discord.MessageEmbed()
   .setColor("BLACK")
   .setFooter(client.user.username, client.user.avatarURL())
-  .setDescription(`Log kanalı; ${kanal} olarak ayarlandı!`)
+  .setDescription(`Log kanalı; ${kanal} olarak ayarlandı!\n Sistem Aktif Edildi.`)
   message.channel.send(embed)
   return
 };

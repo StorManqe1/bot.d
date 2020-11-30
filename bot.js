@@ -215,6 +215,7 @@ client.on("roleDelete", async (role) => {
   
   
 })
+
 client.on("channelDelete", async channel => {
   if(!channel.guild.me.hasPermission("MANAGE_CHANNELS")) return;
   let guild = channel.guild;
@@ -224,12 +225,12 @@ client.on("channelDelete", async channel => {
   if(member.hasPermission("ADMINISTRATOR")) return;
   channel.clone(channel.name, true, true, "Kanal silme koruması sistemi").then(async klon => {
     if(!db.has(`korumalog_${guild.id}`)) return;
-    let logs = guild.channels.cache.find(ch => ch.id === db.fetch(`korumalog_${guild.id}`));
+    let logs = guild.channels.find(ch => ch.id === db.fetch(`korumalog_${guild.id}`));
     if(!logs) return db.delete(`korumalog_${guild.id}`); else {
       const embed = new Discord.MessageEmbed()
       .setDescription(`Silinen Kanal: <#${klon.id}> (Yeniden oluşturuldu!)\nSilen Kişi: ${member.user}`)
       .setColor('RED')
-      .setAuthor(member.user.tag, member.user.displayAvatarURL())
+      .setAuthor(member.user.tag, member.user.displayAvatarURL)
       logs.send(embed);
     }
     await klon.setParent(channel.parent);
