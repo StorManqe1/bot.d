@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
   let user = message.mentions.users.first();
   let reason = args.slice(1).join(' ');
   let banlogkanalı = await db.fetch(`banlog_${member.guild.id}`);
-  let banlog = member.guild.channels.cache.find("name", banlogkanalı);
+  if (!banlogkanalı) return;
   if (message.mentions.users.size < 1) return message.reply('Kimi banlayacağını yazmalısın.');
   if (reason.length < 0) return message.reply('Ban sebebini yazmalısın.');
 
@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
     .addField('Banlanan:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Banlayan:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Ban Sebebi', reason);
-  message.guild.channels.cache.get(db.fetch(`banlog_${message.guild.id}`)).send(embed);
+  message.guild.channels.cache.get(banlogkanalı).send(embed);
 };
 
 exports.conf = {
