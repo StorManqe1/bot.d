@@ -177,27 +177,41 @@ let kanal = await db.fetch(`antiraidK_${member.guild.id}`)== "anti-raid-aç"
 
 //KANAL & ROL KORUMA
 
-client.on("roleDelete", async role => {
-  let kanal = await db.fetch(`rolk_${role.guild.id}`);
-  if (!kanal) return;
-  const entry = await role.guild
-    .fetchAuditLogs({ type: "ROLE_DELETE" })
-    .then(audit => audit.entries.first());
-      role.guild.roles.create({
-    name: role.name,
-    color: role.hexColor,
-    permissions: role.permissions
-  });
+  client.on('roleDelete', async role => {
+let guild = role.guild;
+  
+  let e = await guild.fetchAuditLogs({type: 'ROLE_DELETE'});
+  let member = guild.members.cache.get(e.entries.first().executor.id);
+  if(member.hasPermission("ADMINISTRATOR")) return;
+        
+  let mention = role.mentionable;
+  let hoist = role.hoist;
+  let color = role.hexColor;
+  let name = role.name;
+  let perms = role.permissions;
+  let position = role.position;
+  role.guild.roles.create({
+    name: name,
+    color: color,
+    hoist: hoist,
+    position: position,
+    permissions: perms,
+    mentionable: mention
+  }).then(async rol => {
+    
+  guild.members.forEach(async u => {
+  const dat = await require('quick.db').fetch(`${guild.id}.${role.id}.${u.id}`)
+  if(dat) {
 
-   let emran = new Discord.MessageEmbed()
-   .setColor('0x36393E')
-   .setTitle(`Bir rol silindi !`)
-   .setDescription(`Silinen rol adı ${role.name}, Rol koruma sistemi açık olduğu için rol geri oluşturuldu!`)
-   client.channels.cache.get(kanal).send(emran)
-
-
-});
-
+  guild.members.cache.get(u.id).roles.add(rol.id)
+  }
+    
+  })
+client.channels.cache.get('757977948862021662').send(new Discord.MessageEmbed().setAuthor(guild.name, guild.iconURL).setTitle(`Bir rol silindi!`)
+.setDescription(`${rol.name} isimli rol ${member} tarafından silindi ve bende tekrardan rolü oluşturdum, önceden role sahip olan tüm kişilere rolü geri verdim.`))
+  })
+  
+})
 
 client.on("channelDelete", async channel => {
   if(!channel.guild.me.permissions.has("MANAGE_CHANNELS")) return;
