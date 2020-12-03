@@ -4,7 +4,7 @@ const ayarlar = require('../ayarlar.json')
 exports.run = async (client, message, args) => {
   
   let prefix = await require('quick.db').fetch(`prefix_${message.guild.id}`) || ayarlar.prefix
-  if (!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send(`❌ Bu Komutu Kullana Bilmek İçin \`Sunucuyu Yönet\` Yetkisine Sahip Olmalısın!`)
+  if (!message.member.permissions.has("MANAGE_GUILD")) return message.channel.send(`❌ Bu Komutu Kullana Bilmek İçin \`Sunucuyu Yönet\` Yetkisine Sahip Olmalısın!`)
   
   let capslock = await db.fetch(`capslock_${message.guild.id}`)
   if (capslock) {

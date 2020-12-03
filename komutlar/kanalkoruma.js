@@ -2,6 +2,7 @@ const db = require("quick.db");
 const Discord = require("discord.js");
 
 exports.run = async (client, message, args) => {
+  if(!message.member.permissions.has("ADMINISTRATOR")) return message.reply("bu komutu kullanmak için `Yönetici` yetkisine sahip olmalısın.")
   let prefix = (await db.fetch(`prefix_${message.guild.id}`)) || "?";
 let kanal = message.mentions.channels.first()
 if(!kanal){
@@ -24,7 +25,7 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: ["kanal-k"],
-  permLevel: 3,
+  permLevel: 0,
   kategori: "sunucu"
 };
 

@@ -4,7 +4,7 @@ exports.run = function(client, message,  args) {
 let codeworkprefix = args.slice(0).join('!');
 if(!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send(`Bu özelliği kullanabilmek için \`Mesajları Yönet\` yetkisine sahip olmalısınız.`);
        if (talkedRecently.has(message.author.id)) {
-           return message.channel.send(message.author + ",Bu Özelliği 120 Saniyede Bir Kullanabilirsin!");
+           return message.channel.send(`${message.member}` + ", Bu Özelliği 120 Saniyede Bir Kullanabilirsin!");
     } else {
         talkedRecently.add(message.author.id);
         setTimeout(() => {
@@ -12,9 +12,9 @@ if(!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.se
           talkedRecently.delete(message.author.id);
         }, 120000);
     }
-if(!args[0]) return message.channel.send(message.author + ",Lütfen 1-99 Arası Sayı Girin!");
+if(!args[0]) return message.channel.send(`${message.member}` + ", Lütfen 1-99 Arası Sayı Girin!");
 message.channel.bulkDelete(args[0]).then(() => {
-  message.channel.send(`${message.member}, ${args[0]} Adet Mesaj Başarıyla Uzaya Fırlatıldı! :rocket:`)
+  message.channel.send(`${message.member}, ${args[0]} Adet Mesaj Başarıyla Uzaya Fırlatıldı! :rocket:`).then(nordx => nordx.delete({timeout: 5000}))
   
 })
 }

@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
-
+if(!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send(`Bu özelliği kullanabilmek için \`Mesajları Yönet\` yetkisine sahip olmalısınız.`);
   let every = message.guild.roles.cache.find(r => r.name === '@everyone')
 message.channel.createOverwrite(every, {
   'SEND_MESSAGES': null,
@@ -16,7 +16,7 @@ exports.conf = {
   guildOnly: false,
   aliases: ['aç','a','saç'],
 kategori: 'sohbet',
-  permLevel: 3
+  permLevel: 0
 };
 
 exports.help = {

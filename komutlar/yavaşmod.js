@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 
 exports.run = async(client, message, args) => {
+  if(!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send(`Bu özelliği kullanabilmek için \`Mesajları Yönet\` yetkisine sahip olmalısınız.`);
 if (message.channel.type !== "text") return;
 const limit = args[0] ? args[0] : 0;
   if(!limit) {
@@ -30,7 +31,7 @@ request({
   enabled: true,
   guildOnly: false,
   aliases: ["slow-mode", "slowmode", "yavas-mod", 'yavasmod', 'yavaşmod'],
-  permLevel: 3,
+  permLevel: 0,
 };
 
 exports.help = {

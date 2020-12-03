@@ -28,9 +28,7 @@ exports.run = async function(client, message, args) {
   .catch(error => message.channel.send("`14` günden önceki mesajları silemem!"))
     
         
-  message.channel.send(`**${u.tag}** adlı kullanıcının **${x}** adet mesajı başarıyla silindi!`)
-  
-	message.delete();
+  message.channel.send(`**${u.tag}** adlı kullanıcının **${x}** adet mesajı başarıyla silindi!`).then(nordx => nordx.delete({timeout: 5000}))
     
 };
 
