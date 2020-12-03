@@ -284,22 +284,43 @@ client.on("messageUpdate", async msg => {
 //REKLAM ENGEL
 
 client.on("message", msg => {
- if(!db.has(`reklam_${msg.guild.id}.reklam`)) return;
+ const veri = db.fetch(`${msg.guild.id}.reklam`)
+ if (veri) {
         const reklam = [".com", ".net", ".xyz", ".tk", ".pw", ".io", ".me", ".gg", "www.", "https", "http", ".gl", ".org", ".com.tr", ".biz", "net", ".rf.gd", ".az", ".party", "discord.gg", "youtube.com"];
         if (reklam.some(word => msg.content.includes(word))) {
           try {
             if (!msg.member.permissions.has("BAN_MEMBERS")) {
                   msg.delete();
-                    return msg.reply('Yakaladım Seni! Reklam Yasak.').then(nordx => nordx.delete({timeout: 5000}))
-   
- 
-  msg.delete(3000);                              
- 
+                    return msg.reply('Yakaladım Seni! Reklam Yasak.').then(nordx => nordx.delete({timeout: 5000}))                          
+            
             }              
           } catch(err) {
             console.log(err);
           }
         }
+ }
+       if(!veri) return;
     });
 
 //REKLAM ENGEL SON
+
+//EVERYONE-HERE ENGEL
+
+client.on("message", async msg => {
+  
+let hereengelle = await db.fetch(`hereengel_${msg.guild.id}`)
+ if (hereengelle == 'acik') {
+   
+      const here = ["@here", "@everyone"];
+  if (here.some(word => msg.content.toLowerCase().includes(word)) ) {
+    if (!msg.member.permissions.has("ADMINISTRATOR")) {
+      msg.delete()
+       return msg.reply('Yakaladım Seni! Everyone ve Here Etiketlemek Yasak.').then(nordx => nordx.delete({timeout: 5000}))
+        }
+    }
+ } else if (hereengelle == 'kapali') {
+ 
+}
+});
+
+//EVERYONE-HERE ENGEL SON

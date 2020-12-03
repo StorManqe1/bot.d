@@ -10,10 +10,10 @@ if(args[0] === 'aç') {
 }
 if (args[0] === 'kapat') {
   db.delete(`${message.guild.id}.reklam`)
-message.channel.send(`Reklam Engel Başarılı Bir Şekilde Kapatıldı Edildi`)
+message.channel.send(`Reklam Engel Başarılı Bir Şekilde Kapatıldı.`)
 return
 }
-  message.channel.send('Lütfen **aç** veya **kapat** yazın. Örnek Kullanım: **reklam-engel aç/kapat**')
+  message.channel.send('Lütfen aç veya kapat yazın. **Örnek Kullanım:** reklam-engel aç/kapat')
 };
 exports.conf = {
  enabled: true,
