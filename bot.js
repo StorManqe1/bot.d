@@ -156,16 +156,16 @@ let kanal = await db.fetch(`antiraidK_${member.guild.id}`)== "anti-raid-aç"
  client.on("message", async msg => {
   if (msg.channel.type === "dm") return;
   if (msg.author.bot) return;
-  if (msg.content.length > 4) {
+  if (msg.content.length > 1) {
     if (db.fetch(`capslock_${msg.guild.id}`)) {
       let caps = msg.content.toUpperCase();
       if (msg.content == caps) {
-        if (!msg.member.hasPermission("ADMINISTRATOR")) {
+        if (!msg.member.permissions.has("ADMINISTRATOR")) {
           if (!msg.mentions.users.first()) {
             msg.delete();
             return msg.channel
-              .send(`Bu sunucuda Caps Lock Engelleme sistemi kullanılıyor.Bu yüzden mesajını sildim!`)
-              .then(m => m.delete(5000));
+              .send(`Bu sunucuda Caps Lock Engelleme sistemi kullanılıyor.Bu yüzden mesajını sildim!`).then(nordx => nordx.delete({timeout: 5000}))
+              
           }
         }
       }
@@ -180,13 +180,13 @@ let kanal = await db.fetch(`antiraidK_${member.guild.id}`)== "anti-raid-aç"
 
 client.on("roleDelete", async (role) => {
   let guild = role.guild;
-  if(!guild.me.hasPermission("MANAGE_ROLES")) return;
+  if(!guild.me.permissions.has("MANAGE_ROLES")) return;
   let koruma = db.fetch(`korumaacik_${role.guild.id}`)
   if(koruma == null) return; 
   let e = await guild.fetchAuditLogs({type: 'ROLE_DELETE'});
   let member = guild.members.cache.get(e.entries.first().executor.id);
   if(!member) return;
-  if(member.hasPermission("ADMINISTRATOR")) return;
+  if(member.permissions.has("ADMINISTRATOR")) return;
   let mention = role.mentionable;
   let hoist = role.hoist;
   let color = role.hexColor;
@@ -217,12 +217,12 @@ client.on("roleDelete", async (role) => {
 })
 
 client.on("channelDelete", async channel => {
-  if(!channel.guild.me.hasPermission("MANAGE_CHANNELS")) return;
+  if(!channel.guild.me.permissions.has("MANAGE_CHANNELS")) return;
   let guild = channel.guild;
   const logs = await channel.guild.fetchAuditLogs({ type: 'CHANNEL_DELETE' })
   let member = guild.members.cache.get(logs.entries.first().executor.id);
   if(!member) return;
-  if(member.hasPermission("ADMINISTRATOR")) return;
+  if(member.permissions.has("ADMINISTRATOR")) return;
   channel.clone(channel.name, true, true, "Kanal silme koruması sistemi").then(async klon => {
     if(!db.has(`korumalog_${guild.id}`)) return;
     let logs = guild.channels.find(ch => ch.id === db.fetch(`korumalog_${guild.id}`));
@@ -239,3 +239,45 @@ client.on("channelDelete", async channel => {
 })
 
 //KANAL & ROL KORUMA SON
+
+//KÜFÜR ENGEL
+
+client.on("message", async msg => {
+ const i = await db.fetch(`${msg.guild.id}.kufur`)
+    if (i) {
+        const kufur = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "mal", "sik", "yarrak", "am", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "ak", "amq",];
+        if (kufur.some(word => msg.content.includes(word))) {
+          try {
+            if (!msg.member.permissions.has("BAN_MEMBERS")) {
+                  msg.delete();
+                          
+                      return msg.reply('Heey! Küfür Yasak.').then(nordx => nordx.delete({timeout: 5000}))
+            }              
+          } catch(err) {
+            console.log(err);
+          }
+        }
+    }
+    if (!i) return;
+});
+
+client.on("messageUpdate", async msg => {
+ const i = db.fetch(`${msg.guild.id}.kufur`)
+    if (i) {
+        const kufur = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "mal", "sik", "yarrak", "am", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "ak", "amq",];
+        if (kufur.some(word => msg.content.includes(word))) {
+          try {
+            if (!msg.member.permissions.has("BAN_MEMBERS")) {
+                  msg.delete();
+                          
+                      return msg.reply('Yakaladım Seni! Küfür Yasak.').then(nordx => nordx.delete({timeout: 5000}))
+            }              
+          } catch(err) {
+            console.log(err);
+          }
+        }
+    }
+    if (!i) return;
+});
+
+//KÜFÜR ENGEL SON (Düzenlenecek!)

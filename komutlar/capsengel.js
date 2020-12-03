@@ -2,9 +2,8 @@ const Discord = require('discord.js');
 const db = require('quick.db')
 const ayarlar = require('../ayarlar.json')
 exports.run = async (client, message, args) => {
-  
+  if (!message.member.permissions.has("MANAGE_GUILD")) return message.channel.send(`❌ Bu Komutu Kullana Bilmek İçin \`Mesajları Yönet\` Yetkisine Sahip Olmalısın!`)
   let prefix = await require('quick.db').fetch(`prefix_${message.guild.id}`) || ayarlar.prefix
-  if (!message.member.permissions.has("MANAGE_GUILD")) return message.channel.send(`❌ Bu Komutu Kullana Bilmek İçin \`Sunucuyu Yönet\` Yetkisine Sahip Olmalısın!`)
   
   let capslock = await db.fetch(`capslock_${message.guild.id}`)
   if (capslock) {
