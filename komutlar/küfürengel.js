@@ -18,7 +18,7 @@ return
 exports.conf = {
  enabled: true,
  guildOnly: false,
- aliases: [], 
+ aliases: ['küfürengel'], 
  permLevel: 0
 };
 

@@ -163,8 +163,7 @@ let kanal = await db.fetch(`antiraidK_${member.guild.id}`)== "anti-raid-aç"
         if (!msg.member.permissions.has("ADMINISTRATOR")) {
           if (!msg.mentions.users.first()) {
             msg.delete();
-            return msg.channel
-              .send(`Bu sunucuda Caps Lock Engelleme sistemi kullanılıyor.Bu yüzden mesajını sildim!`).then(nordx => nordx.delete({timeout: 5000}))
+            return msg.channel.send(`${msg.member}, Capslock Kapat Lütfen!`).then(nordx => nordx.delete({timeout: 5000}))
               
           }
         }
@@ -281,3 +280,26 @@ client.on("messageUpdate", async msg => {
 });
 
 //KÜFÜR ENGEL SON (Düzenlenecek!)
+
+//REKLAM ENGEL
+
+client.on("message", msg => {
+ if(!db.has(`reklam_${msg.guild.id}.reklam`)) return;
+        const reklam = [".com", ".net", ".xyz", ".tk", ".pw", ".io", ".me", ".gg", "www.", "https", "http", ".gl", ".org", ".com.tr", ".biz", "net", ".rf.gd", ".az", ".party", "discord.gg", "youtube.com"];
+        if (reklam.some(word => msg.content.includes(word))) {
+          try {
+            if (!msg.member.permissions.has("BAN_MEMBERS")) {
+                  msg.delete();
+                    return msg.reply('Yakaladım Seni! Reklam Yasak.').then(nordx => nordx.delete({timeout: 5000}))
+   
+ 
+  msg.delete(3000);                              
+ 
+            }              
+          } catch(err) {
+            console.log(err);
+          }
+        }
+    });
+
+//REKLAM ENGEL SON
