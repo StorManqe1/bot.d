@@ -185,17 +185,17 @@ client.on("roleDelete", async role => {
     .then(audit => audit.entries.first());
   if (entry.executor.id == client.user.id) return;
   if (entry.executor.id == role.guild.owner.id) return;
-  if(!entry.executor.permissions.has('ADMINISTRATOR')) {
+  if(!entry.executor.hasPermission('ROLE_DELETE')) {
       role.guild.roles.create({
     name: role.name,
     color: role.hexColor,
     permissions: role.permissions
   });
-   let embed = new Discord.MessageEmbed()
+   let emran = new Discord.MessageEmbed()
    .setColor('0x36393E')
    .setTitle(`Bir rol silindi !`)
-   .setDescription(`Silinen rol adı ${role.name}, Rol koruma sistemi açık olduğu için rol geri oluşturuldu.`)
-   client.channels.cache.get(kanal).send(embed)
+   .setDescription(`Silinen rol adı ${role.name}, Rol koruma sistemi açık olduğu için rol geri oluşturuldu!`)
+   client.channels.cache.get(kanal).send(emran)
   }
 });
 
