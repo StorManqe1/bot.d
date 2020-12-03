@@ -177,42 +177,6 @@ let kanal = await db.fetch(`antiraidK_${member.guild.id}`)== "anti-raid-aç"
 
 //KANAL & ROL KORUMA
 
-  client.on('roleDelete', async role => {
-let guild = role.guild;
-  
-  let e = await guild.fetchAuditLogs({type: 'ROLE_DELETE'});
-  let member = guild.members.cache.get(e.entries.first().executor.id);
-  if(member.hasPermission("ADMINISTRATOR")) return;
-        
-  let mention = role.mentionable;
-  let hoist = role.hoist;
-  let color = role.hexColor;
-  let name = role.name;
-  let perms = role.permissions;
-  let position = role.position;
-  role.guild.roles.create({
-    name: name,
-    color: color,
-    hoist: hoist,
-    position: position,
-    permissions: perms,
-    mentionable: mention
-  }).then(async rol => {
-    
-  guild.members.forEach(async u => {
-  const dat = await require('quick.db').fetch(`${guild.id}.${role.id}.${u.id}`)
-  if(dat) {
-
-  guild.members.cache.get(u.id).roles.add(rol.id)
-  }
-    
-  })
-client.channels.cache.get('757977948862021662').send(new Discord.MessageEmbed().setAuthor(guild.name, guild.iconURL).setTitle(`Bir rol silindi!`)
-.setDescription(`${rol.name} isimli rol ${member} tarafından silindi ve bende tekrardan rolü oluşturdum, önceden role sahip olan tüm kişilere rolü geri verdim.`))
-  })
-  
-})
-
 client.on("channelDelete", async channel => {
   if(!channel.guild.me.permissions.has("MANAGE_CHANNELS")) return;
   let guild = channel.guild;
@@ -320,5 +284,5 @@ let hereengelle = await db.fetch(`hereengel_${msg.guild.id}`)
  
 }
 });
-
+    
 //EVERYONE-HERE ENGEL SON
