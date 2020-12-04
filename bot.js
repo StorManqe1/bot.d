@@ -309,7 +309,7 @@ client.on('channelCreate', async channel => {
                     .addField(`Kanal oluşturuldu`, `Kanal İsmi: \`${channel.name}\`\n Kanal Türü: **${channel.type}**\nKanal ID: ${channel.id}`)
                     .setTimestamp()
                     .setColor("RANDOM")
-                    .setFooter(`Oluşturan Kişi: ${channel.client.user.username}#${channel.client.user.discriminator}`, channel.client.user.avatarURL)
+                    .setFooter(`${channel.client.user.username}#${channel.client.user.discriminator}`, channel.client.user.avatarURL)
     c.send(embed)
 });
 
@@ -320,7 +320,7 @@ client.on('channelDelete', async channel => {
                     .addField(`Kanal silindi`, `Silinen Kanal İsmi: \`${channel.name}\`\nSilinen Kanal Türü: **${channel.type}**\nSilinen Kanal ID: ${channel.id}`)
                     .setTimestamp()
                     .setColor("RANDOM")
-                    .setFooter(`Silen ${channel.client.user.username}#${channel.client.user.discriminator}`, channel.client.user.avatarURL)
+                    .setFooter(`${channel.client.user.username}#${channel.client.user.discriminator}`, channel.client.user.avatarURL)
 
     c.send(embed)
 });
@@ -344,7 +344,7 @@ client.on('emojiCreate', emoji => {
   if (!c) return;
 
     let embed = new Discord.MessageEmbed()
-                    .addField(`Emoji oluşturuldu`, ` İsmi: \`${emoji.name}\`\n GIF?: **${emoji.animated}**\n► ID: ${emoji.id}`)
+                    .addField(`Emoji oluşturuldu`, ` İsmi: \`${emoji.name}\`\n Gif?: **${emoji.animated}**\nEmoji ID: ${emoji.id}`)
                     .setTimestamp()
                     .setColor("RANDOM")
                     .setFooter(`${emoji.client.user.username}#${emoji.client.user.discriminator}`, emoji.client.user.avatarURL)
@@ -356,7 +356,7 @@ client.on('emojiDelete', emoji => {
   if (!c) return;
 
     let embed = new Discord.MessageEmbed()
-                    .addField(`Emoji silindi`, ` İsmi: \`${emoji.name}\`\n GIF? : **${emoji.animated}**\n► ID: ${emoji.id}`)
+                    .addField(`Emoji silindi`, ` İsmi: \`${emoji.name}\`\n Gif? : **${emoji.animated}**\nSilinen Emoji ID: ${emoji.id}`)
                     .setTimestamp()
                     .setColor("RANDOM")
                     .setFooter(`${emoji.client.user.username}#${emoji.client.user.discriminator}`, emoji.client.user.avatarURL)
@@ -368,7 +368,7 @@ client.on('emojiUpdate', (oldEmoji, newEmoji) => {
   if (!c) return;
 
     let embed = new Discord.MessageEmbed()
-                    .addField(`Emoji güncellendi`, ` Eski ismi: \`${oldEmoji.name}\`\n Yeni ismi: \`${newEmoji.name}\`\n► ID: ${oldEmoji.id}`)
+                    .addField(`Emoji güncellendi`, ` Eski ismi: \`${oldEmoji.name}\`\n Yeni ismi: \`${newEmoji.name}\`\nEmoji ID: ${oldEmoji.id}`)
                     .setTimestamp()
                     .setColor("RANDOM")
                     .setFooter(`${newEmoji.client.user.username}#${newEmoji.client.user.discriminator}`, newEmoji.client.user.avatarURL)
@@ -385,7 +385,7 @@ client.on('messageDelete', async message => {
     let embed = new Discord.MessageEmbed()
                     .setAuthor(`Silen Kişi: ${message.author.username}#${message.author.discriminator}`, message.author.avatarURL())
                     .setTitle("Mesaj silindi")                
-                    .addField(`Silinen mesaj : ${message.content}`,`Kanal: ${message.channel.name}`)
+                    .addField(`Silinen mesaj : ${message.content}`,`Silindiği Kanal: ${message.channel.name}`)
                     .setTimestamp()
                     .setColor("RANDOM")
                     .setFooter(`${message.client.user.username}#${message.client.user.discriminator}`, message.client.user.avatarURL)
@@ -418,7 +418,7 @@ client.on('roleCreate', async (role) => {
   if (!channel) return;
   
     let embed = new Discord.MessageEmbed()
-.addField(`Rol oluşturuldu`, ` ismi: \`${role.name}\`\n ID: ${role.id}`)                    
+.addField(`Rol oluşturuldu`, `Rol ismi: \`${role.name}\`\nRol ID: ${role.id}`)                    
 .setTimestamp()
 .setColor("RANDOM")
 .addField("Rol renk kodu : ",`${role.hexColor}`)
@@ -433,7 +433,7 @@ client.on('roleDelete', async (role) => {
   if (!channel) return;
   
     let embed = new Discord.MessageEmbed()
-.addField(`Rol silindi`, ` ismi: \`${role.name}\`\n ID: ${role.id}`)                    
+.addField(`Rol silindi`, `Silinen Rol ismi: \`${role.name}\`\nSilinen Rol ID: ${role.id}`)                    
 .setTimestamp()
 .setColor("RANDOM")
     .addField("Rol renk kodu : ",`${role.hexColor}`)
@@ -457,17 +457,22 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
-    .setDescription(`${newMember.user.tag} adlı kullanıcı \`${newUserChannel.name}\` isimli sesli kanala giriş yaptı!`)
+    .setDescription(`${newMember.user} adlı kullanıcı \`${newUserChannel.name}\` isimli sesli kanala giriş yaptı!`)
     kanal.send(embed);
     
   } else if(newUserChannel === undefined){
 
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
-    .setDescription(`${newMember.user.tag} adlı kullanıcı sesli kanaldan çıkış yaptı!`)
+    .setDescription(`${newMember.user} adlı kullanıcı \`${oldUserChannel.name}\` isimli sesli kanaldan çıkış yaptı!`)
     kanal.send(embed);
     
   }
+});
+ client.on('guildUpdate', (oldGuild, newGuild) => {
+           sda
+           }
+           
 });
 
 //Modlog Son
