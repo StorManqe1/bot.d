@@ -464,15 +464,12 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
-    .setDescription(`${newMember.user} adlı kullanıcı \`${oldUserChannel.name}\` isimli sesli kanaldan çıkış yaptı!`)
+    .setDescription(`${newMember.user} adlı kullanıcı sesli kanaldan çıkış yaptı!`)
     kanal.send(embed);
     
   }
 });
- client.on('guildUpdate', (oldGuild, newGuild) => {
-           sda
-           }
-           
-});
-
+ 
 //Modlog Son
+
+//NOT MODLOG KODU DÜZENLENİCEK - KANAL KORUMA ROL KORUMA DÜZENLENİCEK - FAKE HESAP SİSTEMİ EKLENİCEK - BAN SİSTEMİ DÜZENLENİCEK - KİCK SİSTEMİ EKLENİCEK\\
