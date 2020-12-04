@@ -299,3 +299,9 @@ let hereengelle = await db.fetch(`hereengel_${msg.guild.id}`)
 });
     
 //EVERYONE-HERE ENGEL SON
+
+//Modlog
+
+
+
+//Modlog Son
