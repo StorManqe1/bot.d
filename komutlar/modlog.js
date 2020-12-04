@@ -2,26 +2,26 @@ const Discord = require('discord.js')
 const db = require('quick.db')
 
 exports.run = async(client, message, args) => {
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
+  if (!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send(`Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
 
 let logk = message.mentions.channels.first();
-let logkanal = await db.fetch(`codeminglog_${message.guild.id}`)
+let logkanal = await db.fetch(`nordxmodlog${message.guild.id}`)
   
   if (args[0] === "sıfırla" || args[0] === "kapat") {
-    if(!logkanal) return message.channel.sendEmbed(new Discord.RichEmbed().setDescription(`Modlog Kanalı Zaten ayarlı değil`).setColor("RANDOM"));
+    if(!logkanal) return message.channel.send(new Discord.MessageEmbed().setDescription(`Modlog Kanalı Zaten ayarlı değil`).setColor("RANDOM"));
     
-    db.delete(`codeminglog_${message.guild.id}`)
-   message.channel.sendEmbed(new Discord.RichEmbed().setDescription(`ModLog Kanalı başarıyla sıfırlandı`).setColor("RANDOM"));
+    db.delete(`nordxmodlog${message.guild.id}`)
+   message.channel.send(new Discord.MessageEmbed().setDescription(`ModLog Kanalı başarıyla sıfırlandı`).setColor("RANDOM"));
 
     return
   }
   
-if (!logk) return message.channel.sendEmbed(new Discord.RichEmbed().setDescription(`Bir modlog kanalı belirt`).setColor("RANDOM"));
+if (!logk) return message.channel.send(new Discord.MessageEmbed().setDescription(`Bir modlog kanalı belirt`).setColor("RANDOM"));
  
 
-db.set(`codeminglog_${message.guild.id}`, logk.id)
+db.set(`nordxmodlog${message.guild.id}`, logk.id)
 
-message.channel.sendEmbed(new Discord.RichEmbed().setDescription(`Mod-Log kanalı başarıyla ${logk} olarak ayarlandı`).setColor("RANDOM"));
+message.channel.send(new Discord.MessageEmbed().setDescription(`Mod-Log kanalı başarıyla ${logk} olarak ayarlandı`).setColor("RANDOM"));
 
 console.log(`Mod-log komutu ${message.author.username} Tarafından kullanıldı`)
 };
