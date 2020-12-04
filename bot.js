@@ -177,26 +177,39 @@ let kanal = await db.fetch(`antiraidK_${member.guild.id}`)== "anti-raid-aç"
 
 //KANAL & ROL KORUMA
 
-client.on("channelDelete", async channel => {
-  if(!channel.guild.me.permissions.has("MANAGE_CHANNELS")) return;
-  let guild = channel.guild;
-  const logs = await channel.guild.fetchAuditLogs({ type: 'CHANNEL_DELETE' })
-  let member = guild.members.cache.get(logs.entries.first().executor.id);
-  if(!member) return;
-  if(member.permissions.has("ADMINISTRATOR")) return;
-  channel.clone(channel.name, true, true, "Kanal silme koruması sistemi").then(async klon => {
-    if(!db.has(`korumalog_${guild.id}`)) return;
-    let logs = guild.channels.find(ch => ch.id === db.fetch(`korumalog_${guild.id}`));
-    if(!logs) return db.delete(`korumalog_${guild.id}`); else {
-      const embed = new Discord.MessageEmbed()
-      .setDescription(`Silinen Kanal: <#${klon.id}> (Yeniden oluşturuldu!)\nSilen Kişi: ${member.user}`)
-      .setColor('RED')
-      .setAuthor(member.user.tag, member.user.displayAvatarURL)
-      logs.send(embed);
-    }
-    await klon.setParent(channel.parent);
-    await klon.setPosition(channel.position);
-  })
+client.on("roleDelete", async role => {
+         const entry = await role.guild.fetchAuditLogs({ type: "ROLE_DELETE" }).then(audit => audit.entries.first());
+    if (entry.executor.id == client.user.id) return;
+  role.guild.roles.create({ data: {
+          name: role.name,
+          color: role.color,
+          hoist: role.hoist,
+          permissions: role.permissions,
+          mentionable: role.mentionable,
+          position: role.position
+}, reason: 'Silinen Roller Tekrar Açıldı.'})
+})
+client.on("roleCreate", async role => {
+       const entry = await role.guild.fetchAuditLogs({ type: "ROLE_CREATE" }).then(audit => audit.entries.first());
+    if (entry.executor.id == client.user.id) return;
+  role.delete()
+}) 
+
+client.on("channelDelete", async function(channel) {
+    let rol = await db.fetch(`kanalk_${channel.guild.id}`);
+  
+  if (rol) {
+const guild = channel.guild.cache;
+let channelp = channel.parentID;
+
+  channel.clone().then(z => {
+    let kanal = z.guild.channels.find(c => c.name === z.name);
+    kanal.setParent(
+      kanal.guild.channels.find(channel => channel.id === channelp)
+      
+    );
+  });
+  }
 })
 
 //KANAL & ROL KORUMA SON
