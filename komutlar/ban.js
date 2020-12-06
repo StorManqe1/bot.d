@@ -3,7 +3,7 @@ const db = require('quick.db')
 const client = new Discord.Client();
 
 exports.run = async (client, message, args) => {
- if(!message.member.permissions.has(db.fetch(`banyetkilisi_${message.guild.id}`))) {
+ if(!message.member.hasPermission(db.fetch(`banyetkilisi_${message.guild.id}`))) {
     return message.channel.send("Bu Komutu Kullanabilmek İçin Gerekli Yetkiye Sahip Değilsin!");
    }
   
