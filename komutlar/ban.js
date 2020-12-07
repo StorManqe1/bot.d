@@ -1,47 +1,39 @@
 const Discord = require('discord.js');
-const db = require('quick.db')
-const client = new Discord.Client();
+const fs = require('fs');
 
-exports.run = async (client, message, args) => {
- if(!message.member.hasPermission(db.fetch(`banyetkilisi_${message.guild.id}`))) {
-    return message.channel.send("Bu Komutu Kullanabilmek İçin Gerekli Yetkiye Sahip Değilsin!");
-   }
-  
-   const codework = await db.fetch(`banlog_${message.guild.id}`)
-   if(codework == null) return message.channel.send('Lütfen BanLog Kanalı Ayarla!');
-  
-  let member = message.member
+exports.run = (client, message, args) => {
+  if (!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send(`Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
+if (!message.guild) {
+  const ozelmesajuyari = new Discord.MessageEmbed()
+    .setColor('RANDOM')
+  .setTimestamp()
+  .setAuthor(message.author.username, message.author.avatarURL)
+  .addField('Uyarı', '`ban` adlı komutu özel mesajlarda kullanamazsın.')
+  return message.author.send(ozelmesajuyari); }
   let guild = message.guild
-  let user = message.mentions.users.first();
   let reason = args.slice(1).join(' ');
-  let banlogkanalı = await db.fetch(`banlog_${member.guild.id}`);
-  if (!banlogkanalı) return;
-  if (message.mentions.users.size < 1) return message.reply('Kimi banlayacağını yazmalısın.');
-  if (reason.length < 0) return message.reply('Ban sebebini yazmalısın.');
+  let dızcılaraselam = message.mentions.users.first();
 
-  if (!message.guild.member(user).bannable) return message.reply('Yetkili Kişileri Banlayamam.');
-  message.guild.members.ban(user);
-  message.channel.send(`${message.author} Ban İşlemi Başarılı!`)
+  if (message.mentions.users.size < 1) return message.channel.send(`Lütfen sunucudan yasaklayacağınız kişiyi etiketleyin.`).catch(console.error);
 
-  const embed = new Discord.MessageEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .addField('Yapılan İşlem:','Ban')
-    .addField('Banlanan:', `${user.username}#${user.discriminator} (${user.id})`)
-    .addField('Banlayan:', `${message.author.username}#${message.author.discriminator}`)
-    .addField('Ban Sebebi', reason);
-  message.guild.channels.cache.get(banlogkanalı).send(embed);
+  if (!message.guild.member(dızcılaraselam).bannable) return message.channel.send(`❌ Belirttiğiniz kişinin Yetkisi Benden Daha Üstün!`);
+  message.guild.member(dızcılaraselam).ban();
+
+  message.channel.send(" Başarılı, " + dızcılaraselam + " İD'li kullanıcı **" + reason + "** sebebiyle sunucudan yasaklandı.")
+     
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [],
-  permLevel: 0
+  aliases: ['ban'],
+  permLevel: 0,
+    kategori: "moderasyon",
 };
 
 exports.help = {
   name: 'ban',
-  description: 'İstediğiniz kişiyi banlar.',
-  usage: 'ban [kullanıcı] [sebep]'
-}
+  description: 'İstediğiniz kişiyi sunucudan yasaklar.',
+  usage: 'ban <@kullanıcı> <sebep>',
+ 
+};
