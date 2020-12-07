@@ -1,50 +1,36 @@
-const Discord = require('discord.js')
-const ayarlar = require('../ayarlar.json')
-const db = require('quick.db')
+const Discord = require('discord.js');
+const fs = require('fs');
 
-exports.run = async(client, message, args) => {
+exports.run = (client, message, args) => {
   if (!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send(`Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
-let arsix = message.mentions.users.first()
-let sebep = args.slice(1).join(' ')
-if (arsix) {
-const Arsix = new Discord.MessageEmbed()
-.setColor('GREEN')
-.setDescription('Kimi Kickleyeceğini Yazmalısın!')
-return message.channel.send(Arsix)
-}
-if(arsix.id === client.user.id) {
-const Arsix = new Discord.MessageEmbed()
-.setColor('RED') //sa
-.setDescription('Kendi Komutumla Benimi Vurcaktın?!')
-return message.channel.send(Arsix)
-}
-if(arsix.id === message.author.id) {
-const Arsix = new Discord.MessageEmbed()
+if (!message.guild) {
+const ozelmesajuyari = new Discord.MessageEmbed()
+.setTitle('UYARI')
 .setColor('RED')
-.setDescription('Dostum Kendini Kickleyemezssin!')
-return message.channel.send(Arsix)
+.setAuthor(message.author.username, message.author.avatarURL)
+.setDescription('Lütfen bu komudu özelde kullanmak yerine ekli olduğum sunucuda kullan.')
+return message.author.send(ozelmesajuyari);
 }
-if(!sebep) {
-const Arsix = new Discord.MessageEmbed()
-.setColor('RED')
-.setDescription('Bir Sebep Belirtmelisin!')
-return message.channel.send(Arsix)
-}
-message.guild.member(arsix).kick();
-  
-const Arsix = new Discord.MessageEmbed()
-.setColor('GREEN')
-.setDescription(`${Arsix} Adlı Kişi Başaryla **${sebep}** Sebebinden Dolayı ${message.auhtor.tag} Tarafından Sunucudan Uçuruldu!`)
-return message.channel.send(Arsix)
-  
-}
+let guild = message.guild
+let reason = args.slice(1).join(' ');
+let dızcılaraselam = message.mentions.users.first();
+if (message.mentions.users.size < 1) return message.channel.send(`Lütfen sunucudan atacağınız kişiyi etiketleyin.`).catch(console.error);
+if (!message.guild.member(dızcılaraselam).bannable) return message.channel.send(`Belirttiğiniz kişinin Yetkisi Benden Daha Üstün!`);
+message.guild.member(dızcılaraselam).kick();
+message.channel.send(" Başarılı, "+ dızcılaraselam +" İD'li kullanıcı **" + reason + "** sebebiyle sunucudan atıldı.")
+     
+};
+
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [],
+  aliases: ['at'],
   permLevel: 0
-}
+};
 
 exports.help = {
-  name: "kick"
-}
+  name: 'kick',
+  description: 'İstediğiniz kişiyi sunucudan atar.',
+  usage: 'kick <@kullanıcı> <sebep>',
+ 
+};

@@ -319,6 +319,37 @@ let hereengelle = await db.fetch(`hereengel_${msg.guild.id}`)
     
 //EVERYONE-HERE ENGEL SON
 
+//FAKE HESAP CEZA
+
+client.on("guildMemberAdd", member => {
+  var moment = require("moment")
+  require("moment-duration-format")
+  moment.locale("tr")
+   var {Permissions} = require('discord.js');
+   var x = moment(member.user.createdAt).add(3, 'days').fromNow()
+   var user = member.user
+   x = x.replace("birkaç saniye önce", " ")
+   if(!x.includes("önce") || x.includes("sonra") ||x == " ") {
+   var rol = member.guild.roles.cache.get("718883972570152982") //Cezalı Rol İD
+   var kayıtsız = member.guild.roles.cache.get("716365827049259029") //Alınacak Rol İD
+   member.roles.add(rol)
+member.user.send('Hesabın 3 günden önce açıldığı için cezalıya atıldın! Açtırmak İçin Yetkililere Bildir.')
+setTimeout(() => {
+
+        member.roles.remove(kayıtsız.id);
+
+}, 1000)
+
+  
+    
+   }
+        else {
+
+        }  
+    });
+
+//FAKE HESAP CEZA SON
+
 //Modlog
 
 client.on('channelCreate', async channel => {
@@ -491,4 +522,4 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
  
 //Modlog Son
 
-//NOT MODLOG KODU DÜZENLENİCEK - FAKE HESAP SİSTEMİ EKLENİCEK - KİCK SİSTEMİ EKLENİCEK\\
+//NOT MODLOG KODU DÜZENLENİCEK - FAKE HESAP SİSTEMİ EKLENİCEK - SPAM ENGEL SİSTEMİ EKLENİCEK\\
