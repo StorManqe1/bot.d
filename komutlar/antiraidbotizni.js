@@ -13,7 +13,7 @@ exports.run = (client, message, args) => {
     return message.reply("Sadece ID");
   }
   if (args[0] == "ver") {
-    client.users.get(args[0]);
+    client.users.cache.get(args[0]);
     db.set(`botizin_${message.guild.id}.${args[1]}`, "aktif");
     message.reply(args[1] + "ID li bota izin verildi");
   }
