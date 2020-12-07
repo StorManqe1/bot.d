@@ -178,6 +178,8 @@ let kanal = await db.fetch(`antiraidK_${member.guild.id}`)== "anti-raid-aç"
 //KANAL & ROL KORUMA
 
 client.on("roleDelete", async role => {
+  let rolko = await db.fetch(`rolk_${role.guild.id}`);
+  if (rolko) { 
          const entry = await role.guild.fetchAuditLogs({ type: "ROLE_DELETE" }).then(audit => audit.entries.first());
     if (entry.executor.id == client.user.id) return;
   role.guild.roles.create({ data: {
@@ -188,12 +190,21 @@ client.on("roleDelete", async role => {
           mentionable: role.mentionable,
           position: role.position
 }, reason: 'Silinen Roller Tekrar Açıldı.'})
+  }
 })
+
+//
+
 client.on("roleCreate", async role => {
+  let rolk = await db.fetch(`rolk_${role.guild.id}`);
+  if (rolk) { 
        const entry = await role.guild.fetchAuditLogs({ type: "ROLE_CREATE" }).then(audit => audit.entries.first());
     if (entry.executor.id == client.user.id) return;
   role.delete()
-}) 
+  }
+})
+
+//
 
 client.on("channelDelete", async function(channel) {
     let rol = await db.fetch(`kanalk_${channel.guild.id}`);
@@ -211,6 +222,8 @@ let channelp = channel.parentID;
   });
   }
 })
+
+//
 
 client.on("emojiDelete", async (emoji, message, channels) => {
   
