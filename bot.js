@@ -226,22 +226,18 @@ let channelp = channel.parentID;
 //
 
 client.on("emojiDelete", async (emoji, message, channels) => {
-  
+  let emojik = await db.fetch(`emojik_${emoji.guild.id}`)
+  if (emojik) {
   const entry = await emoji.guild.fetchAuditLogs({ type: "EMOJI_DELETE" }).then(audit => audit.entries.first());
   if (entry.executor.id == client.user.id) return;
   if (entry.executor.id == emoji.guild.owner.id) return;
   if (!emoji.guild.members.cache.get(entry.executor.id).hasPermission('ADMINISTRATOR')) {
     
   emoji.guild.emojis.create(`${emoji.url}`, `${emoji.name}`).catch(console.error);
-    
-   let jkood = new Discord.MessageEmbed()
-   .setColor('RANDOM')
-   .setTitle(`Bir Emoji Silindi`)
-   .setDescription(`Silinen Emoji: ${emoji.name}, Emoji Koruma Sistemi Sayesinde Tekrar Eklendi!`)
-   client.channels.cache.get('757977859506569317').send(jkood)
+
   
   }
-
+  }
 });
 
 //KANAL & ROL & EMOJİ KORUMA SON
@@ -343,8 +339,8 @@ client.on("guildMemberAdd", member => {
    var user = member.user
    x = x.replace("birkaç saniye önce", " ")
    if(!x.includes("önce") || x.includes("sonra") ||x == " ") {
-   var rol = member.guild.roles.cache.get("718883972570152982") //Cezalı Rol İD
-   var kayıtsız = member.guild.roles.cache.get("716365827049259029") //Alınacak Rol İD
+   var rol = member.guild.roles.cache.get("785565778140332033") //Cezalı Rol İD
+   var kayıtsız = member.guild.roles.cache.get("757559050232660019") //Alınacak Rol İD
    member.roles.add(rol)
 member.user.send('Hesabın 3 günden önce açıldığı için cezalıya atıldın! Açtırmak İçin Yetkililere Bildir.')
 setTimeout(() => {
@@ -535,4 +531,4 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
  
 //Modlog Son
 
-//NOT MODLOG KODU DÜZENLENİCEK - FAKE HESAP SİSTEMİ EKLENİCEK - SPAM ENGEL SİSTEMİ EKLENİCEK\\
+//NOT MODLOG KODU DÜZENLENİCEK - SPAM ENGEL SİSTEMİ EKLENİCEK\\
