@@ -254,7 +254,7 @@ client.on("messageUpdate", async msg => {
     if (!i) return;
 });
 
-//KÜFÜR ENGEL SON (Düzenlenecek!)
+//KÜFÜR ENGEL SON
 
 //REKLAM ENGEL
 
@@ -472,4 +472,4 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
  
 //Modlog Son
 
-//NOT MODLOG KODU DÜZENLENİCEK - KANAL KORUMA ROL KORUMA DÜZENLENİCEK - FAKE HESAP SİSTEMİ EKLENİCEK - BAN SİSTEMİ DÜZENLENİCEK - KİCK SİSTEMİ EKLENİCEK\\
+//NOT MODLOG KODU DÜZENLENİCEK - FAKE HESAP SİSTEMİ EKLENİCEK - KİCK SİSTEMİ EKLENİCEK\\
