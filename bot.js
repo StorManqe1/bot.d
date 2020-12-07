@@ -212,7 +212,26 @@ let channelp = channel.parentID;
   }
 })
 
-//KANAL & ROL KORUMA SON
+client.on("emojiDelete", async (emoji, message, channels) => {
+  
+  const entry = await emoji.guild.fetchAuditLogs({ type: "EMOJI_DELETE" }).then(audit => audit.entries.first());
+  if (entry.executor.id == client.user.id) return;
+  if (entry.executor.id == emoji.guild.owner.id) return;
+  if (!emoji.guild.members.cache.get(entry.executor.id).hasPermission('ADMINISTRATOR')) {
+    
+  emoji.guild.emojis.create(`${emoji.url}`, `${emoji.name}`).catch(console.error);
+    
+   let jkood = new Discord.MessageEmbed()
+   .setColor('RANDOM')
+   .setTitle(`Bir Emoji Silindi`)
+   .setDescription(`Silinen Emoji: ${emoji.name}, Emoji Koruma Sistemi Sayesinde Tekrar Eklendi!`)
+   client.channels.cache.get('757977859506569317').send(jkood)
+  
+  }
+
+});
+
+//KANAL & ROL & EMOJİ KORUMA SON
 
 //KÜFÜR ENGEL
 
