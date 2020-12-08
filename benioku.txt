@@ -1,8 +1,8 @@
 
 
+**
+//Youtube = Jkood'a Aittir! Çalınması Durumunda Telif Hakkı Kullanılacaktır.\\
 
-//CODEWORK SUNUCUSUNA AİTTİR! discord.gg/codework
+TOKEN .ENV KISMINDA TOKEN YAZAN YERİN KARŞISINA GİRİLECEK!
 
-TOKEN .ENV KISMINA GİRİLECEK!
-
-SAHİP İD VE PREFİX = AYARLAR.JSONA GİRİLECEK!
+SAHİP İD VE PREFİX = AYARLAR.JSONA GİRİLECEK!**
