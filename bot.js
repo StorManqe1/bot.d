@@ -530,5 +530,3 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 });
  
 //Modlog Son
-
-//NOT MODLOG KODU DÜZENLENİCEK - SPAM ENGEL SİSTEMİ EKLENİCEK\\
