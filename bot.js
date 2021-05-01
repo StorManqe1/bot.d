@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`discord.gg/codework`, { type:'WATCHING' })
+ client.user.setActivity(`SanCaK6 ❤️ Alımlarımız Başladı`, { type:'WATCHING' })
   
   console.log("CodeWork Akıyor!!")
 });
@@ -530,3 +530,9 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 });
  
 //Modlog Son
+
+client.on("ready", async () => {
+  console.log("Bot Başarıyla Ses Kanalına Bağlandı")
+  let botVoiceChannel = client.channels.cache.get("837857513311436820");
+  if (botVoiceChannel) botVoiceChannel.join().catch(err => console.error("Bot ses kanalına bağlanırken bir hata oluştu!"));
+});

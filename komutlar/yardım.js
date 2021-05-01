@@ -8,7 +8,7 @@ exports.run = async(client, message, args) => {
         const jkood = new Discord.MessageEmbed()
 
              .setColor('#fff000')
-             .addField(`İşte Komutlarım!`, `
+             .addField(`SanCaK Guard Komutları !`, `
              ${prefix}antiraid aç
              ${prefix}capsengel aç
              ${prefix}emojikoruma aç
@@ -19,12 +19,7 @@ exports.run = async(client, message, args) => {
              ${prefix}reklamengel aç
              ${prefix}rolkoruma aç
              ${prefix}sohbet-aç
-             ${prefix}sohbet-kapat
-             ${prefix}sil-üye @üye miktar
-             ${prefix}sil miktar
-             ${prefix}yavaşmod süre
-             ${prefix}ban @üye sebep
-             ${prefix}kick @üye sebep             
+             ${prefix}sohbet-kapat        
              `)
              .setFooter(`${message.author.username} Tarafından istendi.`, message.author.avatarURL())
             
