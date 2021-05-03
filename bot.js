@@ -22,9 +22,9 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`SanCaK6 👑 Senpaii'q7`, { type:'WATCHING' })
+ client.user.setActivity(`Lilşqm 💖 Redania`, { type:'WATCHING' })
   
-  console.log("CodeWork Akıyor!!")
+  console.log(":oa3:")
 });
 
 const log = message => {
