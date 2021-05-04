@@ -266,7 +266,7 @@ client.on("message", async msg => {
 client.on("messageUpdate", async msg => {
  const i = db.fetch(`${msg.guild.id}.kufur`)
     if (i) {
-        const kufur = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "mal", "sik", "yarrak", "am", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "ak", "amq",];
+        const kufur = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "amk", "sg", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "mal", "sik", "yarrak", "am", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "ak", "amq","sg","0c","an0an",];
         if (kufur.some(word => msg.content.includes(word))) {
           try {
             if (!msg.member.permissions.has("BAN_MEMBERS")) {
