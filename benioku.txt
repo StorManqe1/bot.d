@@ -1,7 +1,7 @@
 
 
 **
-//Youtube = Jkood'a Aittir! Çalınması Durumunda Telif Hakkı Kullanılacaktır.\\
+//Youtube = 'a Aittir! Çalınması Durumunda Telif Hakkı Kullanılacaktır.\\
 
 TOKEN .ENV KISMINDA TOKEN YAZAN YERİN KARŞISINA GİRİLECEK!
 
