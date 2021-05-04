@@ -537,3 +537,7 @@ client.on("ready", async () => {
   if (botVoiceChannel) botVoiceChannel.join().catch(err => console.error("Bot ses kanalına bağlanırken bir hata oluştu!"));
 });
 client.login(process.env.TOKEN)
+
+client.on("ready", () => {
+client.channels.cache.get("825461122597519378").join()
+})
