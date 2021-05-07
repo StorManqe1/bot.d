@@ -503,8 +503,8 @@ client.on('roleDelete', async (role) => {
 client.on('voiceStateUpdate', (oldMember, newMember) => {
   
  // if (!logA[oldMember.guild.id]) return;
-  
-  if (db.has(`nordxmodlog${oldMember.guild.id}`) === false) return;
+   
+if (db.has(`nordxmodlog${oldMember.guild.id}`) === false) return;
   
   var kanal = oldMember.guild.channels.cache.get(db.fetch(`nordxmodlog${oldMember.guild.id}`).replace("<#", "").replace(">", ""))
   if (!kanal) return;
@@ -528,8 +528,8 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
     
   }
 });
- 
-//Modlog Son
+    
+//ModlogSon
 
 client.on('ready', ()  => {
 let kanal = client.channels.cache.get("839792701200400394")
