@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`Mevo 💖 Adonis`, { type:'WATCHING' })
+ client.user.setActivity(`Okeanos 💘 Darned`, { type:'PLAYING' })
   
   console.log(":oa3:")
 });
@@ -142,7 +142,7 @@ let kanal = await db.fetch(`antiraidK_${member.guild.id}`)== "anti-raid-aç"
        let izinverilmemişbot = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setThumbnail(member.user.avatarURL())
-      .setDescription("**" + member.user.tag +"**" + " (" + member.id+ ") " + "adlı bot sunucuya eklendi ve banladım eğer izin vermek istiyorsanız **" + "!bot-izni ver <botid>**")
+      .setDescription("**" + member.user.tag +"**" + " (" + member.id+ ") " + "adlı bot sunucuya eklendi ve banladım eğer izin vermek istiyorsanız **" + ".bot-izni ver <botid>**")
        member.ban();// Eğer sunucudan atmak istiyorsanız ban kısmını kick yapın
        darknesyt.send(izinverilmemişbot)
 }
@@ -531,13 +531,11 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
  
 //Modlog Son
 
-client.on("ready", async () => {
-  console.log("Bot Başarıyla Ses Kanalına Bağlandı")
-  let botVoiceChannel = client.channels.cache.get("838820167576059985");
-  if (botVoiceChannel) botVoiceChannel.join().catch(err => console.error("Bot ses kanalına bağlanırken bir hata oluştu!"));
-});
-client.login(process.env.TOKEN)
-
-client.on("ready", () => {
-client.channels.cache.get("825461122597519378").join()
+client.on('ready', ()  => {
+let kanal = client.channels.cache.get("839792701200400394")
+if(kanal === undefined){
+console.log("kanalı bulamıyorum.")
+} else {
+kanal.join();
+}
 })

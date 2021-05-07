@@ -8,7 +8,7 @@ exports.run = async(client, message, args) => {
         const jkood = new Discord.MessageEmbed()
 
              .setColor('#fff000')
-             .addField(`SanCaK Guard Komutları !`, `
+             .addField(` Guard Yardım `, `
              ${prefix}antiraid aç
              ${prefix}capsengel aç
              ${prefix}emojikoruma aç
