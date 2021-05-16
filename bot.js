@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`Okeanos 💘 Darned`, { type:'PLAYING' })
+ client.user.setActivity(`Vialandy <3`, { type:'PLAYING' })
   
   console.log(":oa3:")
 });
