@@ -21,7 +21,15 @@ exports.run = async(client, message, args) => {
              ${prefix}sohbet-aç
              ${prefix}sohbet-kapat 
              ${prefix}sil <1-1000>
-             ${prefix}-otorol        
+             ${prefix}otorol   
+             ${prefix}sa-as aç/kapat
+             ${prefix}nuke
+             ${prefix}komut
+             ${prefix}ban
+             ${prefix}bansay
+             ${prefix}afk
+             ${prefix}yaz
+             ${prefix}yetkilerim     
              `)
              .setFooter(`${message.author.username} Tarafından istendi.`, message.author.avatarURL())
             
