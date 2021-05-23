@@ -614,3 +614,27 @@ client.on("message" , async msg => {
   }
   
 });
+
+///////////////////tag
+
+client.on("message", async message => {
+const laurysas = message.content.toLocaleLowerCase();
+
+  if (
+    laurysas === "tag" ||
+    laurysas === "tag ne" ||
+    laurysas === "tagcık" ||
+    laurysas === "tagımız" ||
+    laurysas === ".tag" ||
+    laurysas === "tagcık"
+  ) {
+    let e = await db.fetch(`sa-as_${message.guild.id}`);
+    if (e === "acik") {
+      const laurysaas = new Discord.MessageEmbed()
+     .setDescription(`<@${message.author.id}> **Tagımız : Çakar Veya Cakar** <a:xd4:846009795374612511>`)
+     .setColor("BLUE")
+      
+    return message.channel.send(laurysaas)
+    }
+  }
+});
