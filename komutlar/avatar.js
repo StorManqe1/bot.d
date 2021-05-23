@@ -8,7 +8,7 @@ exports.run = async(client, message)=> {
     
 const embed = new Discord.MessageEmbed()
 //.setAuthor(`${user.tag} adlı kullanıcının avatarı:`)
- .setDescription(`<@${message.author.id}> İstediğin Kişinin Avatarı <:yumuyumu:844238118365954108>: `)
+ .setDescription(`<@${message.author.id}> İstediğin Kişinin Avatarı <a:xd4:846009795374612511>: `)
 .setImage(user.displayAvatarURL({dynamic:true})) 
 .setTimestamp()
 .setColor('#f6ff00')

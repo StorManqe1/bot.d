@@ -516,10 +516,33 @@ if (db.has(`nordxmodlog${oldMember.guild.id}`) === false) return;
 //ModlogSon
 
 client.on('ready', ()  => {
-let kanal = client.channels.cache.get("839792701200400394")
+let kanal = client.channels.cache.get("845063140441980951")
 if(kanal === undefined){
 console.log("kanalı bulamıyorum.")
 } else {
 kanal.join();
 }
 })
+//////////////////////////////Otorol
+
+client.on("message", async message => {
+const laurysas = message.content.toLocaleLowerCase();
+
+  if (
+    laurysas === "selam" ||
+    laurysas === "sa" ||
+    laurysas === "selamün aleyküm" ||
+    laurysas === "selamun aleyküm" ||
+    laurysas === "slm" ||
+    laurysas === "sea"
+  ) {
+    let e = await db.fetch(`sa-as_${message.guild.id}`);
+    if (e === "acik") {
+      const laurysaas = new Discord.MessageEmbed()
+     .setDescription(`<@${message.author.id}> **Aleyküm Selam, Hoş Geldin** <a:xd4:846009795374612511>`)
+     .setColor("BLUE")
+      
+    return message.channel.send(laurysaas)
+    }
+  }
+});
