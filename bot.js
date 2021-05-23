@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`Vialandy <3`, { type:'PLAYING' })
+ client.user.setActivity(`Ravex XD??`, { type:'PLAYING' })
   
   console.log(":oa3:")
 });
@@ -231,7 +231,7 @@ client.on("emojiDelete", async (emoji, message, channels) => {
 client.on("message", async msg => {
  const i = await db.fetch(`${msg.guild.id}.kufur`)
     if (i) {
-        const kufur = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "mal", "sik", "yarrak", "am", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "ak", "amq",];
+        const kufur = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "mal", "sik", "yarrak", "am", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "4mk", "amq",];
         if (kufur.some(word => msg.content.includes(word))) {
           try {
             if (!msg.member.permissions.has("BAN_MEMBERS")) {
