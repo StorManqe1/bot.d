@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`❤️ Ares Her Daim Hizmette a!yardım ❤️`, { type:'PLAYING' })
+ client.user.setActivity(`#MİKEY❤️`, { type:'PLAYING' })
   
   console.log(":oa3:")
 });

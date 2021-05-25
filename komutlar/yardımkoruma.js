@@ -7,25 +7,30 @@ const lembed = new Discord.MessageEmbed()
 const mhelp = new Discord.MessageEmbed()
 .setColor("YELLOW")
 .setAuthor(`${client.user.username} `, client.user.avatarURL)  
-.setTitle("Moderasyon Komutları")
+.setTitle("Koruma Komutları")
 .setThumbnail("")
     .setDescription(`
 
 
 
-<a:topares:846775019551588453> **a!ban** : İstediğiniz Kişiyi Banlar
+<a:topares:846775019551588453> **a!antiraid** : Bildiğiniz Antiraid
 
-<a:topares:846775019551588453> **a!küfürengel** : Sunucuda Küfür Etmenize İzin Vermez
+<a:topares:846775019551588453> **a!botizni** : Bildiğimiz Bot Sistemi
 
-<a:topares:846775019551588453> **a!otorol** : Otorol Mesajı Ve Otorol Ayarlar
+<a:topares:846775019551588453> **a!reklamengel** : Sunucunuzdaki Reklamları Engeller
 
-<a:topares:846775019551588453> **a!nuke** : Kanalı Siler Tekrardan Açar
+<a:topares:846775019551588453> **a!modlog** : Sunucudaki Herşeyi Oraya Atar Denetim Kaydı Gibi
 
-<a:topares:846775019551588453> **a!sa-as** : Sa Mesajına Cevap Verir
+<a:topares:846775019551588453> **a!capsengel** : Sunucuda Caps Açılmasına İzin Vermez
 
-<a:topares:846775019551588453> **a!yetkilerim** : Sunucudaki Yetkilerinizi Gösterir
+<a:topares:846775019551588453> **a!everengel** : Sunucuda Ever Here Atılmasına İzin Vermez
 
-<a:topares:846775019551588453> **a!sil** : 1/1000 Arası Msg Siler
+<a:topares:846775019551588453> **a!kanalkoruma** : Birinin Kanal Açmasına Silmesine İzin Vermez
+
+<a:topares:846775019551588453> **a!rolkoruma** : Birinin Rol Açmasına Silmesine İzin Vermez
+
+<a:topares:846775019551588453> **a!güvenlik** : Sunucuya Giren Kullanıcıların Bilgilerini Atar
+
 
 
 
@@ -68,12 +73,12 @@ message.channel.send(mhelp)
 exports.conf = {
     enabled: true, 
     guildOnly: false, 
-    aliases: ["m","myardım"], 
+    aliases: ["k","kyardım"], 
     permLevel: 0 
   };
  
   exports.help = {
-    name: 'moderasyon', 
+    name: 'koruma', 
     description: 'yardım menüsü',
-    usage: 'moderasyon'
+    usage: 'koruma'
   };
