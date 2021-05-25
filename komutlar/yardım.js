@@ -16,7 +16,7 @@ exports.run = async (client, message) => {
     )
     .addField(
       `__Genel Komutlar__`,
-      `<a:topares:846775019551588453> \`${prefix}genel\``,
+      `<a:topares:846775019551588453> \`${prefix}moderasyon\``,
       true
     )
     .addField(

@@ -4,13 +4,13 @@ const db = require("quick.db");
 exports.run = (client, message, args) => {
   if (!message.member.hasPermission("ADMINISTRATOR"))
     return message.reply(
-      "Bu komutu kullanabilmek için yönetici yetkisine sahip olmalısın '"
+      "Bu komutu kullanabilmek için yönetici yetkisine sahip olmalısın <a:topares:846775019551588453> '"
     );
 
   let chanel = message.mentions.channels.first();
   if (!chanel)
     return message.reply(
-      "Lütfen güvenlik mesajlarının gideceği kanalı etiketle "
+      "Lütfen güvenlik mesajlarının gideceği kanalı etiketle  <a:topares:846775019551588453>"
     );
 
   db.set(`güvenlik.${message.guild.id}`, chanel.id);

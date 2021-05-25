@@ -500,14 +500,14 @@ if (db.has(`nordxmodlog${oldMember.guild.id}`) === false) return;
 
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
-    .setDescription(`${newMember.user} adlı kullanıcı \`${newUserChannel.name}\` isimli sesli kanala giriş yaptı!`)
+    .setDescription(`Bir kullanıcı \`${newUserChannel.name}\` isimli sesli kanala giriş yaptı!`)
     kanal.send(embed);
     
   } else if(newUserChannel === undefined){
 
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
-    .setDescription(`${newMember.user} adlı kullanıcı sesli kanaldan çıkış yaptı!`)
+    .setDescription(`Biri sesli kanaldan çıkış yaptı!`)
     kanal.send(embed);
     
   }
@@ -540,7 +540,7 @@ const laurysas = message.content.toLocaleLowerCase();
     if (e === "acik") {
       const laurysaas = new Discord.MessageEmbed()
      .setDescription(`<@${message.author.id}> **Aleyküm Selam, Hoş Geldin** `)
-     .setColor("BLUE")
+     .setColor("YELLOW")
       
     return message.channel.send(laurysaas)
     }
@@ -558,7 +558,7 @@ client.on("guildMemberAdd", async member => {
     client.channels.cache
       .get(kanal)
       .send(
-        ":loudspeaker: :inbox_tray: Otomatik Rol Verildi Seninle Beraber `" +
+        "<a:topares:846775019551588453> Otomatik Rol Verildi Seninle Beraber `" +
           member.guild.memberCount +
           "` Kişiyiz! Hoşgeldin! `" +
           member.user.username +
@@ -600,12 +600,12 @@ client.on("message" , async msg => {
    const kisi3 = db.fetch(`afkid_${afk.id}_${msg.guild.id}`)
    if(msg.content.includes(kisi3)){
 
-       msg.channel.send(new Discord.MessageEmbed().setColor('BLACK').setDescription(`<@` + msg.author.id + `> Etiketlediğiniz Kişi Afk \nSebep : ${sebep}`))
+       msg.channel.send(new Discord.MessageEmbed().setColor('YELLOW').setDescription(`<@` + msg.author.id + `> Etiketlediğiniz Kişi Afk \nSebep : ${sebep}`))
    }
  }
   if(msg.author.id === kisi){
 
-       msg.channel.send(new Discord.MessageEmbed().setColor('BLACK').setDescription(`<@${kisi}> Başarıyla Afk Modundan Çıktınız`))
+       msg.channel.send(new Discord.MessageEmbed().setColor('YELLOW').setDescription(`<@${kisi}> Başarıyla Afk Modundan Çıktınız`))
    db.delete(`afkSebep_${msg.author.id}_${msg.guild.id}`)
    db.delete(`afkid_${msg.author.id}_${msg.guild.id}`)
    db.delete(`afkAd_${msg.author.id}_${msg.guild.id}`)
@@ -617,10 +617,3 @@ client.on("message" , async msg => {
 
 ///////////////////tag
 
-client.on("ready", async () => {
-  client.user.setPresence({
-    activity: { name: "#Ares" },
-    status: "idle"
-  });
-  
-});
