@@ -516,7 +516,7 @@ if (db.has(`nordxmodlog${oldMember.guild.id}`) === false) return;
 //ModlogSon
 
 client.on('ready', ()  => {
-let kanal = client.channels.cache.get("845959286836428810")
+let kanal = client.channels.cache.get("846836053506916362")
 if(kanal === undefined){
 console.log("kanalı bulamıyorum.")
 } else {

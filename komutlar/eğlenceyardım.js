@@ -15,23 +15,25 @@ const mhelp = new Discord.MessageEmbed()
 
     
 
-<a:naber:846785563536523282> **-fbi** : Fbi Çağırır (ironi)
+<a:naber:846785563536523282> **m!fbi** : Fbi Çağırır (ironi)
 
-<a:naber:846785563536523282> **-saat** : Size Saati Gösterir
+<a:naber:846785563536523282> **m!saat** : Size Saati Gösterir
 
-<a:naber:846785563536523282> **-balıktut** : Balık Tutarsınız 
+<a:naber:846785563536523282> **m!balıktut** : Balık Tutarsınız 
 
-<a:naber:846785563536523282> **-aduket-çek** : İstediğiniz Kişiye Aduket Çekersiniz
+<a:naber:846785563536523282> **m!aduket-çek** : İstediğiniz Kişiye Aduket Çekersiniz
 
-<a:naber:846785563536523282> **-aşk** : Onla Olan Aşk Oranınızı Ölçer :D
+<a:naber:846785563536523282> **m!aşk** : Onla Olan Aşk Oranınızı Ölçer :D
 
-<a:naber:846785563536523282> **-espri** : Bot Size Espri Yapar
+<a:naber:846785563536523282> **m!espri** : Bot Size Espri Yapar
 
-<a:naber:846785563536523282> **-vine** : Komik Bi Vine Gösterir
+<a:naber:846785563536523282> **m!vine** : Komik Bi Vine Gösterir
 
-<a:naber:846785563536523282> **-kaçcm** : Kaç Cm OLduğunu Söyler :D
+<a:naber:846785563536523282> **m!kaçcm** : Kaç Cm OLduğunu Söyler :D
 
-<a:naber:846785563536523282> **-yazankazanır** : Arkadaşınızla Yazan Kazanır Oynarsınız
+<a:naber:846785563536523282> **m!yazankazanır** : Arkadaşınızla Yazan Kazanır Oynarsınız
+
+<a:naber:846785563536523282> **m!spo @etiket** : İstediğniz Kişinin Spotify Bilgisini Gösterir
 
 
 
