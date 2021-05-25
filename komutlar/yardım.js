@@ -1,50 +1,47 @@
-const Discord = require('discord.js');
-const ayarlar = require('../ayarlar.json');
+const Discord = require("discord.js");
+const ayarlar = require("../ayarlar.json");
 
-var prefix = ayarlar.prefix;
+exports.run = async (client, message) => {
+  let prefix = ayarlar.prefix;
 
-exports.run = async(client, message, args) => {
+  const embed = new Discord.MessageEmbed()
+    .setAuthor(``)
+    .setTitle(``)
+    .setColor("YELLOW")
+    .setThumbnail(
+      "https://cdn.discordapp.com/attachments/826141237471871016/846771821542244382/d208628656b74f3ffc7e36dc5846a71b.png"
+    )
+    .setDescription(
+      `<a:topares:846775019551588453>  Botumuzu Eklemek İçin \`${prefix}davet\` yazabilirsiniz.`
+    )
+    .addField(
+      `__Genel Komutlar__`,
+      `<a:topares:846775019551588453> \`${prefix}genel\``,
+      true
+    )
+    .addField(
+      `__Ayarlar Komutlar__`,
+      `⚙️  \`${prefix}koruma\` `,
+      true
+    )
+   .addField(
+      `__Ayarlar Komutlar__`,
+      `⚙️  \`${prefix}eğlence\` `,
+      true
 
-        const jkood = new Discord.MessageEmbed()
-
-             .setColor('#fff000')
-             .addField(` Çakar Team Yardım <a:xd4:846009795374612511> `, `
-             ${prefix}antiraid aç
-             ${prefix}capsengel aç
-             ${prefix}emojikoruma aç
-             ${prefix}everengel aç
-             ${prefix}kanalkoruma aç
-             ${prefix}küfürengel aç
-             ${prefix}modlog #kanal
-             ${prefix}reklamengel aç
-             ${prefix}rolkoruma aç
-             ${prefix}sohbet-aç
-             ${prefix}sohbet-kapat 
-             ${prefix}sil <1-1000>
-             ${prefix}otorol   
-             ${prefix}sa-as aç/kapat
-             ${prefix}nuke
-             ${prefix}komut
-             ${prefix}ban
-             ${prefix}bansay
-             ${prefix}afk
-             ${prefix}yaz
-             ${prefix}yetkilerim     
-             `)
-             .setFooter(`${message.author.username} Tarafından istendi.`, message.author.avatarURL())
-            
-        return message.channel.send(jkood);
-}
+    );
+  return message.channel.send(embed);
+};
 
 exports.conf = {
-	enabled : true,
-	guildOnly : false,
-	aliases : ['help'],
-	permLevel : 0
-}
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: 0
+};
+
 exports.help = {
-	name : 'yardım',
-	description : 'Komut kategorilerini atar',
-	usage : '!yardım'
-}
-//DÜZENLENECEK
+  name: "yardım",
+  description: "Yardım Menüsü",
+  usage: "yardım"
+};
