@@ -15,7 +15,7 @@ db.set(`sa-as_${message.guild.id}`, `acik`);
 message.channel.send(new Discord.MessageEmbed()
   .addField("İşlem Başarılı",`Sa-As Sistemi Başarılı Bir Şekilde Açıldı   `)
   .setColor("GREEN")
-.setFooter("Çakar Team"))
+.setFooter("Ars"))
 
 }
 else if(yrnex === "kapat") {

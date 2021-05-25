@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`Ares Her Daim Hizmette a!yardım❤️`, { type:'PLAYING' })
+ client.user.setActivity(`❤️ Ares Her Daim Hizmette a!yardım ❤️`, { type:'PLAYING' })
   
   console.log(":oa3:")
 });
@@ -516,7 +516,7 @@ if (db.has(`nordxmodlog${oldMember.guild.id}`) === false) return;
 //ModlogSon
 
 client.on('ready', ()  => {
-let kanal = client.channels.cache.get("845063140441980951")
+let kanal = client.channels.cache.get("845959286836428810")
 if(kanal === undefined){
 console.log("kanalı bulamıyorum.")
 } else {
@@ -539,7 +539,7 @@ const laurysas = message.content.toLocaleLowerCase();
     let e = await db.fetch(`sa-as_${message.guild.id}`);
     if (e === "acik") {
       const laurysaas = new Discord.MessageEmbed()
-     .setDescription(`<@${message.author.id}> **Aleyküm Selam, Hoş Geldin** <a:xd4:846009795374612511>`)
+     .setDescription(`<@${message.author.id}> **Aleyküm Selam, Hoş Geldin** `)
      .setColor("BLUE")
       
     return message.channel.send(laurysaas)
@@ -617,24 +617,10 @@ client.on("message" , async msg => {
 
 ///////////////////tag
 
-client.on("message", async message => {
-const laurysas = message.content.toLocaleLowerCase();
-
-  if (
-    laurysas === "tag" ||
-    laurysas === "tag ne" ||
-    laurysas === "tagcık" ||
-    laurysas === "tagımız" ||
-    laurysas === ".tag" ||
-    laurysas === "tagcık"
-  ) {
-    let e = await db.fetch(`sa-as_${message.guild.id}`);
-    if (e === "acik") {
-      const laurysaas = new Discord.MessageEmbed()
-     .setDescription(`<@${message.author.id}> **Tagımız : Çakar Veya Cakar** <a:xd4:846009795374612511>`)
-     .setColor("BLUE")
-      
-    return message.channel.send(laurysaas)
-    }
-  }
+client.on("ready", async () => {
+  client.user.setPresence({
+    activity: { name: "#Ares" },
+    status: "idle"
+  });
+  
 });

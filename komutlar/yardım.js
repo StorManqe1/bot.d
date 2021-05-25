@@ -5,7 +5,7 @@ exports.run = async (client, message) => {
   let prefix = ayarlar.prefix;
 
   const embed = new Discord.MessageEmbed()
-    .setAuthor(``)
+    .setAuthor(`Ares 😋`)
     .setTitle(``)
     .setColor("YELLOW")
     .setThumbnail(
@@ -21,12 +21,12 @@ exports.run = async (client, message) => {
     )
     .addField(
       `__Ayarlar Komutlar__`,
-      `⚙️  \`${prefix}koruma\` `,
+      `<a:topares:846775019551588453>  \`${prefix}koruma\` `,
       true
     )
    .addField(
       `__Ayarlar Komutlar__`,
-      `⚙️  \`${prefix}eğlence\` `,
+      `<a:topares:846775019551588453>  \`${prefix}eğlence\` `,
       true
 
     );
