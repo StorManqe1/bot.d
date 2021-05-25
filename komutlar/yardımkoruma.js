@@ -5,11 +5,15 @@ const lembed = new Discord.MessageEmbed()
 
 .then;   
 const mhelp = new Discord.MessageEmbed()
-.setColor("YELLOW")
+.setColor("Yellow")
 .setAuthor(`${client.user.username} `, client.user.avatarURL)  
-.setTitle("Koruma Komutları")
+.setTitle("Koruma Yardım Menüsü")
 .setThumbnail("")
     .setDescription(`
+
+
+
+    
 
 
 
@@ -30,10 +34,6 @@ const mhelp = new Discord.MessageEmbed()
 <a:naber:846785563536523282> **m!rolkoruma** : Birinin Rol Açmasına Silmesine İzin Vermez
 
 <a:naber:846785563536523282> **m!güvenlik** : Sunucuya Giren Kullanıcıların Bilgilerini Atar
-
-
-
-
 
 
 
