@@ -13,19 +13,19 @@ const mhelp = new Discord.MessageEmbed()
 
 
 
-<a:topares:846775019551588453> **a!ban** : İstediğiniz Kişiyi Banlar
+<a:naber:846785563536523282> **m!ban** : İstediğiniz Kişiyi Banlar
 
-<a:topares:846775019551588453> **a!küfürengel** : Sunucuda Küfür Etmenize İzin Vermez
+<a:naber:846785563536523282> **m!küfürengel** : Sunucuda Küfür Etmenize İzin Vermez
 
-<a:topares:846775019551588453> **a!otorol** : Otorol Mesajı Ve Otorol Ayarlar
+<a:naber:846785563536523282> **m!otorol** : Otorol Mesajı Ve Otorol Ayarlar
 
-<a:topares:846775019551588453> **a!nuke** : Kanalı Siler Tekrardan Açar
+<a:naber:846785563536523282> **m!nuke** : Kanalı Siler Tekrardan Açar
 
-<a:topares:846775019551588453> **a!sa-as** : Sa Mesajına Cevap Verir
+<a:naber:846785563536523282> **m!sa-as** : Sa Mesajına Cevap Verir
 
-<a:topares:846775019551588453> **a!yetkilerim** : Sunucudaki Yetkilerinizi Gösterir
+<a:naber:846785563536523282> **m!yetkilerim** : Sunucudaki Yetkilerinizi Gösterir
 
-<a:topares:846775019551588453> **a!sil** : 1/1000 Arası Msg Siler
+<a:naber:846785563536523282> **m!sil** : 1/1000 Arası Msg Siler
 
 
 

@@ -15,7 +15,7 @@ db.set(`sa-as_${message.guild.id}`, `acik`);
 message.channel.send(new Discord.MessageEmbed()
   .addField("İşlem Başarılı",`Sa-As Sistemi Başarılı Bir Şekilde Açıldı   `)
   .setColor("GREEN")
-.setFooter("Ars"))
+.setFooter("Mikey"))
 
 }
 else if(yrnex === "kapat") {
@@ -23,7 +23,7 @@ db.set(`sa-as_${message.guild.id}`, `kapali`);
 message.channel.send(new Discord.MessageEmbed()
   .addField("İşlem Başarılı",`Sa-As Sistemi Başarılı Bir Şekilde Kapatıldı  `)
   .setColor("RED")
-  .setFooter("Çakar Team"))
+  .setFooter("Mikey"))
 }
 };
 

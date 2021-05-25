@@ -9,28 +9,31 @@ exports.run = async (client, message) => {
     .setTitle(``)
     .setColor("YELLOW")
     .setThumbnail(
-      "https://cdn.discordapp.com/attachments/826141237471871016/846771821542244382/d208628656b74f3ffc7e36dc5846a71b.png"
+      "https://cdn.discordapp.com/attachments/845959266547662848/846786951943815168/tokyo-revengers-manjiro-sano.gif"
+     
     )
     .setDescription(
-      `<a:topares:846775019551588453>  Botumuzu Eklemek İçin \`${prefix}davet\` yazabilirsiniz.`
+      `<a:naber:846785563536523282>  Botumuzu Eklemek İçin \`${prefix}davet\` yazabilirsiniz.`
     )
     .addField(
-      `__Genel Komutlar__`,
-      `<a:topares:846775019551588453> \`${prefix}moderasyon\``,
+      `__Moderasyon Komutları__`,
+      `<a:naber:846785563536523282> \`${prefix}moderasyon\``,
       true
     )
     .addField(
-      `__Ayarlar Komutlar__`,
-      `<a:topares:846775019551588453>  \`${prefix}koruma\` `,
+      `__Koruma Komutları__`,
+      `<a:naber:846785563536523282>  \`${prefix}koruma\` `,
       true
     )
    .addField(
-      `__Ayarlar Komutlar__`,
-      `<a:topares:846775019551588453>  \`${prefix}eğlence\` `,
+      `__Eğlence Komutları__`,
+      `<a:naber:846785563536523282>  \`${prefix}eğlence\` `,
       true
 
     );
   return message.channel.send(embed);
+
+
 };
 
 exports.conf = {

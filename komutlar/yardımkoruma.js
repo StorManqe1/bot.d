@@ -13,23 +13,23 @@ const mhelp = new Discord.MessageEmbed()
 
 
 
-<a:topares:846775019551588453> **a!antiraid** : Bildiğiniz Antiraid
+<a:naber:846785563536523282> **m!antiraid** : Bildiğiniz Antiraid
 
-<a:topares:846775019551588453> **a!botizni** : Bildiğimiz Bot Sistemi
+<a:naber:846785563536523282> **m!botizni** : Bildiğimiz Bot Sistemi
 
-<a:topares:846775019551588453> **a!reklamengel** : Sunucunuzdaki Reklamları Engeller
+<a:naber:846785563536523282> **m!reklamengel** : Sunucunuzdaki Reklamları Engeller
 
-<a:topares:846775019551588453> **a!modlog** : Sunucudaki Herşeyi Oraya Atar Denetim Kaydı Gibi
+<a:naber:846785563536523282> **m!modlog** : Sunucudaki Herşeyi Oraya Atar Denetim Kaydı Gibi
 
-<a:topares:846775019551588453> **a!capsengel** : Sunucuda Caps Açılmasına İzin Vermez
+<a:naber:846785563536523282> **m!capsengel** : Sunucuda Caps Açılmasına İzin Vermez
 
-<a:topares:846775019551588453> **a!everengel** : Sunucuda Ever Here Atılmasına İzin Vermez
+<a:naber:846785563536523282> **m!everengel** : Sunucuda Ever Here Atılmasına İzin Vermez
 
-<a:topares:846775019551588453> **a!kanalkoruma** : Birinin Kanal Açmasına Silmesine İzin Vermez
+<a:naber:846785563536523282> **m!kanalkoruma** : Birinin Kanal Açmasına Silmesine İzin Vermez
 
-<a:topares:846775019551588453> **a!rolkoruma** : Birinin Rol Açmasına Silmesine İzin Vermez
+<a:naber:846785563536523282> **m!rolkoruma** : Birinin Rol Açmasına Silmesine İzin Vermez
 
-<a:topares:846775019551588453> **a!güvenlik** : Sunucuya Giren Kullanıcıların Bilgilerini Atar
+<a:naber:846785563536523282> **m!güvenlik** : Sunucuya Giren Kullanıcıların Bilgilerini Atar
 
 
 
