@@ -5,11 +5,11 @@ exports.run = async (client, message) => {
   let prefix = ayarlar.prefix;
 
   const embed = new Discord.MessageEmbed()
-    .setAuthor(`Mikey 😋`)
+    .setAuthor(`Develop By Hinomura 😋`)
     .setTitle(``)
     .setColor("YELLOW")
     .setThumbnail(
-      "https://cdn.discordapp.com/attachments/845959266547662848/846786951943815168/tokyo-revengers-manjiro-sano.gif"
+      ""
      
     )
     .setDescription(

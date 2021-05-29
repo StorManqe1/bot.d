@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`#MİKEY❤️`, { type:'PLAYING' })
+ client.user.setActivity(`Develop By Hinomura❤️`, { type:'PLAYING' })
   
   console.log(":oa3:")
 });
