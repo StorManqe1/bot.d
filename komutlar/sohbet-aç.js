@@ -8,7 +8,7 @@ message.channel.createOverwrite(every, {
 })
  
 
-   message.channel.send('Sohbet kanalı ``Yazılabilir`` durumuna getirildi.');
+   message.channel.send('Sohbet kanalı ``Yazılabilir`` durumuna getirildi. <a:darksartik:849710173441622056>');
 }
  
 exports.conf = {

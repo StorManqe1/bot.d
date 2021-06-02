@@ -13,7 +13,7 @@ const yrnex = args.join(` `);
 if(yrnex === "aç") {
 db.set(`sa-as_${message.guild.id}`, `acik`);
 message.channel.send(new Discord.MessageEmbed()
-  .addField("İşlem Başarılı",`Sa-As Sistemi Başarılı Bir Şekilde Açıldı   `)
+  .addField("İşlem Başarılı",`Sa-As Sistemi Başarılı Bir Şekilde Açıldı <a:darksartik:849710173441622056>  `)
   .setColor("GREEN")
 .setFooter(""))
 
@@ -21,7 +21,7 @@ message.channel.send(new Discord.MessageEmbed()
 else if(yrnex === "kapat") {
 db.set(`sa-as_${message.guild.id}`, `kapali`);
 message.channel.send(new Discord.MessageEmbed()
-  .addField("İşlem Başarılı",`Sa-As Sistemi Başarılı Bir Şekilde Kapatıldı  `)
+  .addField("İşlem Başarılı",`Sa-As Sistemi Başarılı Bir Şekilde Kapatıldı <a:darksartik:849710173441622056> `)
   .setColor("RED")
   .setFooter(""))
 }

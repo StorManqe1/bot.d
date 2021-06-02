@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
     SEND_MESSAGES: false
   });
 
-  message.channel.send("Sohbet kanalı ``Yazılamaz`` durumuna getirildi.");
+  message.channel.send("Sohbet kanalı ``Yazılamaz`` durumuna getirildi. <a:darksartik:849710173441622056>");
 };
 
 exports.conf = {

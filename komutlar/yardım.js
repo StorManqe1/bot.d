@@ -5,7 +5,7 @@ exports.run = async (client, message) => {
   let prefix = ayarlar.prefix;
 
   const embed = new Discord.MessageEmbed()
-    .setAuthor(`😋`)
+    .setAuthor(`Boruto Hizmette😋`)
     .setTitle(``)
     .setColor("YELLOW")
     .setThumbnail(
@@ -13,21 +13,21 @@ exports.run = async (client, message) => {
      
     )
     .setDescription(
-      `<a:naber:846785563536523282>  Botumuzu Eklemek İçin \`${prefix}davet\` yazabilirsiniz.`
+      `<:boruto:849713659264368731>  Botumuzu Eklemek İçin \`${prefix}davet\` yazabilirsiniz.`
     )
     .addField(
       `__Moderasyon Komutları__`,
-      `<a:naber:846785563536523282> \`${prefix}moderasyon\``,
+      `<:boruto:849713659264368731> \`${prefix}moderasyon\``,
       true
     )
     .addField(
       `__Koruma Komutları__`,
-      `<a:naber:846785563536523282>  \`${prefix}koruma\` `,
+      `<:boruto:849713659264368731>  \`${prefix}koruma\` `,
       true
     )
    .addField(
       `__Eğlence Komutları__`,
-      `<a:naber:846785563536523282>  \`${prefix}eğlence\` `,
+      `<:boruto:849713659264368731>  \`${prefix}eğlence\` `,
       true
 
     );

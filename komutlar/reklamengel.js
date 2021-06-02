@@ -10,7 +10,7 @@ if(args[0] === 'aç') {
 }
 if (args[0] === 'kapat') {
   db.delete(`${message.guild.id}.reklam`)
-message.channel.send(`Reklam Engel Başarılı Bir Şekilde Kapatıldı.`)
+message.channel.send(`Reklam Engel Başarılı Bir Şekilde Kapatıldı. <a:darksartik:849710173441622056>`)
 return
 }
   message.channel.send('Lütfen aç veya kapat yazın. **Örnek Kullanım:** reklam-engel aç/kapat')

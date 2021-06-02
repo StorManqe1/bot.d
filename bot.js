@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`Bot İşlemleri İçin Ravex#2022❤️`, { type:'PLAYING' })
+ client.user.setActivity(`Boruto Yakında Hizmette..❤️`, { type:'PLAYING' })
   
   console.log(":oa3:")
 });
@@ -539,7 +539,7 @@ const laurysas = message.content.toLocaleLowerCase();
     let e = await db.fetch(`sa-as_${message.guild.id}`);
     if (e === "acik") {
       const laurysaas = new Discord.MessageEmbed()
-     .setDescription(`<@${message.author.id}> **Aleyküm Selam, Hoş Geldin** `)
+     .setDescription(`<@${message.author.id}> **Aleyküm Selam, Hoş Geldin** <a:sallaaaaa:849709538931376188>`)
      .setColor("YELLOW")
       
     return message.channel.send(laurysaas)

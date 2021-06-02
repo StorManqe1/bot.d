@@ -5,9 +5,9 @@ const lembed = new Discord.MessageEmbed()
 
 .then;   
 const mhelp = new Discord.MessageEmbed()
-.setColor("Yellow")
+.setColor("BLUE")
 .setAuthor(`${client.user.username} `, client.user.avatarURL)  
-.setTitle("Koruma Yardım Menüsü")
+.setTitle("Boruto Koruma Yardım Menüsü")
 .setThumbnail("")
     .setDescription(`
 
@@ -17,23 +17,23 @@ const mhelp = new Discord.MessageEmbed()
 
 
 
-<a:naber:846785563536523282> **m!antiraid** : Bildiğiniz Antiraid
+<:boruto:849713659264368731> **b!antiraid** : Bildiğiniz Antiraid
 
-<a:naber:846785563536523282> **m!botizni** : Bildiğimiz Bot Sistemi
+<:boruto:849713659264368731> **b!botizni** : Bildiğimiz Bot Sistemi
 
-<a:naber:846785563536523282> **m!reklamengel** : Sunucunuzdaki Reklamları Engeller
+<:boruto:849713659264368731> **b!reklamengel** : Sunucunuzdaki Reklamları Engeller
 
-<a:naber:846785563536523282> **m!modlog** : Sunucudaki Herşeyi Oraya Atar Denetim Kaydı Gibi
+<:boruto:849713659264368731> **b!modlog** : Sunucudaki Herşeyi Oraya Atar Denetim Kaydı Gibi
 
-<a:naber:846785563536523282> **m!capsengel** : Sunucuda Caps Açılmasına İzin Vermez
+<:boruto:849713659264368731> **b!capsengel** : Sunucuda Caps Açılmasına İzin Vermez
 
-<a:naber:846785563536523282> **m!everengel** : Sunucuda Ever Here Atılmasına İzin Vermez
+<:boruto:849713659264368731> **b!everengel** : Sunucuda Ever Here Atılmasına İzin Vermez
 
-<a:naber:846785563536523282> **m!kanalkoruma** : Birinin Kanal Açmasına Silmesine İzin Vermez
+<:boruto:849713659264368731> **b!kanalkoruma** : Birinin Kanal Açmasına Silmesine İzin Vermez
 
-<a:naber:846785563536523282> **m!rolkoruma** : Birinin Rol Açmasına Silmesine İzin Vermez
+<:boruto:849713659264368731> **b!rolkoruma** : Birinin Rol Açmasına Silmesine İzin Vermez
 
-<a:naber:846785563536523282> **m!güvenlik** : Sunucuya Giren Kullanıcıların Bilgilerini Atar
+<:boruto:849713659264368731> **b!güvenlik** : Sunucuya Giren Kullanıcıların Bilgilerini Atar
 
 
 
@@ -64,7 +64,7 @@ const mhelp = new Discord.MessageEmbed()
 
 `) 
        .setImage("")
-       .addField(`»  Bot Bağlantıları`, `  [Bot Davet Linki](https://discord.com/api/oauth2/authorize?client_id=848154194103500830&permissions=8&scope=bot) `)//websiteniz yoksa  **|** [Web Sitesi]() yeri silebilirsiniz 
+       .addField(`»  Bot Bağlantıları`, `  [Bot Davet Linki](https://discord.com/api/oauth2/authorize?client_id=849558767845638145&permissions=8&scope=bot) `)//websiteniz yoksa  **|** [Web Sitesi]() yeri silebilirsiniz 
         .setFooter(`${message.author.username} Tarafından İstendi.`, message.author.avatarURL)
 message.channel.send(mhelp)
 .then; const sembed = new Discord.MessageEmbed()
