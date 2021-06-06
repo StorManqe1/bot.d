@@ -13,7 +13,7 @@ exports.run = async (client, message) => {
      
     )
     .setDescription(
-      `Ravex Yardıma Hazır <a:darksartik:849710173441622056>`
+      `!davet Yazarak Beni Ekleyebilirsin <a:darksartik:849710173441622056>`
     )
     .addField(
       `__Moderasyon Komutları__`,

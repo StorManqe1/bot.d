@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`!yardım 🧶 Ravex Hizmette 🧶 `, { type:'PLAYING' })
+ client.user.setActivity(`!yardım 🧶 Ravex Hizmette 🧶 !davet `, { type:'PLAYING' })
   
   console.log(":oa3:")
 });
@@ -558,7 +558,7 @@ client.on("guildMemberAdd", async member => {
     client.channels.cache
       .get(kanal)
       .send(
-        "<a:topares:846775019551588453> Otomatik Rol Verildi Seninle Beraber `" +
+        "🌀 Otomatik Rol Verildi Seninle Beraber `" +
           member.guild.memberCount +
           "` Kişiyiz! Hoşgeldin! `" +
           member.user.username +
