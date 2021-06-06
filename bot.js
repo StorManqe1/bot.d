@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`Developer Ravex#2022`, { type:'PLAYING' })
+ client.user.setActivity(`!yardım 👑 Ravex Hizmette 👑 `, { type:'PLAYING' })
   
   console.log(":oa3:")
 });
