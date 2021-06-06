@@ -5,7 +5,7 @@ exports.run = async (client, message) => {
   let prefix = ayarlar.prefix;
 
   const embed = new Discord.MessageEmbed()
-    .setAuthor(`Boruto Hizmette😋`)
+    .setAuthor(`Rave`)
     .setTitle(``)
     .setColor("YELLOW")
     .setThumbnail(
@@ -13,21 +13,21 @@ exports.run = async (client, message) => {
      
     )
     .setDescription(
-      `<:boruto:849713659264368731>  Botumuzu Eklemek İçin \`${prefix}davet\` yazabilirsiniz.`
+      `Ravex Yardıma Hazır <a:darksartik:849710173441622056>`
     )
     .addField(
       `__Moderasyon Komutları__`,
-      `<:boruto:849713659264368731> \`${prefix}moderasyon\``,
+      `<a:darksartik:849710173441622056> \`${prefix}moderasyon\``,
       true
     )
     .addField(
       `__Koruma Komutları__`,
-      `<:boruto:849713659264368731>  \`${prefix}koruma\` `,
+      `<a:darksartik:849710173441622056>  \`${prefix}koruma\` `,
       true
     )
    .addField(
       `__Eğlence Komutları__`,
-      `<:boruto:849713659264368731>  \`${prefix}eğlence\` `,
+      `<a:darksartik:849710173441622056>  \`${prefix}eğlence\` `,
       true
 
     );

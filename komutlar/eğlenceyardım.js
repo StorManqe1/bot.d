@@ -15,25 +15,25 @@ const mhelp = new Discord.MessageEmbed()
 
     
 
-<a:kelebek4:849711002236223558> **b!fbi** : Fbi Çağırır (ironi)
+<a:kelebek4:849711002236223558> **!fbi** : Fbi Çağırır (ironi)
 
-<a:kelebek4:849711002236223558> **b!saat** : Size Saati Gösterir
+<a:kelebek4:849711002236223558> **!saat** : Size Saati Gösterir
 
-<a:kelebek4:849711002236223558> **b!balıktut** : Balık Tutarsınız 
+<a:kelebek4:849711002236223558> **!balıktut** : Balık Tutarsınız 
 
-<a:kelebek4:849711002236223558> **b!aduket-çek** : İstediğiniz Kişiye Aduket Çekersiniz
+<a:kelebek4:849711002236223558> **!aduket-çek** : İstediğiniz Kişiye Aduket Çekersiniz
 
-<a:kelebek4:849711002236223558> **b!aşk** : Onla Olan Aşk Oranınızı Ölçer :D
+<a:kelebek4:849711002236223558> **!aşk** : Onla Olan Aşk Oranınızı Ölçer :D
 
-<a:kelebek4:849711002236223558> **b!espri** : Bot Size Espri Yapar
+<a:kelebek4:849711002236223558> **!espri** : Bot Size Espri Yapar
 
-<a:kelebek4:849711002236223558> **b!vine** : Komik Bi Vine Gösterir
+<a:kelebek4:849711002236223558> **!vine** : Komik Bi Vine Gösterir
 
-<a:kelebek4:849711002236223558> **b!kaçcm** : Kaç Cm OLduğunu Söyler :D
+<a:kelebek4:849711002236223558> **!kaçcm** : Kaç Cm OLduğunu Söyler :D
 
-<a:kelebek4:849711002236223558> **b!yazankazanır** : Arkadaşınızla Yazan Kazanır Oynarsınız
+<a:kelebek4:849711002236223558> **!yazankazanır** : Arkadaşınızla Yazan Kazanır Oynarsınız
 
-<a:kelebek4:849711002236223558> **b!spo @etiket** : İstediğniz Kişinin Spotify Bilgisini Gösterir
+<a:kelebek4:849711002236223558> **!spo @etiket** : İstediğniz Kişinin Spotify Bilgisini Gösterir
 
 
 
