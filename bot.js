@@ -617,3 +617,19 @@ client.on("message" , async msg => {
 
 ///////////////////tag
 
+//////zilan=top
+
+client.on("message", message => {
+    if(message.content.toLowerCase() == "zilan") 
+    return message.channel.send(`Topların Efendisi 📚💖`)
+});
+
+client.on("message", message => {
+    if(message.content.toLowerCase() == "top") 
+    return message.channel.send(`zilan `)
+});
+
+client.on("message", message => {
+    if(message.content.toLowerCase() == "atlas") 
+    return message.channel.send(`top 🎀 `)
+});
