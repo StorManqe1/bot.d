@@ -12,7 +12,7 @@ const embed = new Discord.MessageEmbed()
 .setImage(user.displayAvatarURL({dynamic:true})) 
 .setTimestamp()
 .setColor('#f6ff00')
-.setFooter(`Mikey Mikey Mikey`)
+.setFooter(`Ravex Bot`)
 message.channel.send(embed)
  }
 }

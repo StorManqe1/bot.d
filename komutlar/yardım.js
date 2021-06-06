@@ -16,17 +16,17 @@ exports.run = async (client, message) => {
       `!davet Yazarak Beni Ekleyebilirsin <a:darksartik:849710173441622056>`
     )
     .addField(
-      `__Moderasyon Komutları__`,
+      `<a:darkrgbdia:849710253401964584>__Moderasyon Yardım__<a:darkrgbdia:849710253401964584>`,
       `<a:darksartik:849710173441622056> \`${prefix}moderasyon\``,
       true
     )
     .addField(
-      `__Koruma Komutları__`,
+      `<a:darkrgbdia:849710253401964584>__Koruma Yardım__<a:darkrgbdia:849710253401964584>`,
       `<a:darksartik:849710173441622056>  \`${prefix}koruma\` `,
       true
     )
    .addField(
-      `__Eğlence Komutları__`,
+      `<a:darkrgbdia:849710253401964584>__Eğlence Yardım__<a:darkrgbdia:849710253401964584>`,
       `<a:darksartik:849710173441622056>  \`${prefix}eğlence\` `,
       true
 
