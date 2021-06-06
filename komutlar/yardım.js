@@ -5,7 +5,7 @@ exports.run = async (client, message) => {
   let prefix = ayarlar.prefix;
 
   const embed = new Discord.MessageEmbed()
-    .setAuthor(`Rave`)
+    .setAuthor(`Ravex Hizmette <a:kelebek4:849711002236223558>`)
     .setTitle(``)
     .setColor("YELLOW")
     .setThumbnail(
