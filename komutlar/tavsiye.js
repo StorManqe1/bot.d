@@ -12,7 +12,7 @@ let user = message.author.tag;
 let guild = message.guild.name;
 let guildid = message.guild.id;
 let kanal = message.channel.name;
-let gonderilecek_kisi = bot.users.cache.get("325662919511769098")//rapor edilecek kişinin idsi
+let gonderilecek_kisi = bot.users.cache.get("769181920168116275")//rapor edilecek kişinin idsi
 let embed = new Discord.MessageEmbed()
 .setTitle("Tavsiye Bildiri")
 .setThumbnail(bot.user.avatarURL())
@@ -21,10 +21,10 @@ let embed = new Discord.MessageEmbed()
 .addField("Sunucu ID", guildid)
 .addField("Rapor Eden", user, true)
 .setColor("GOLD")
-   message.react("👍");
+   message.react("<a:darksartik:849710173441622056>");
 
 //Volkan Hamarat (🔲 𝕮𝖗𝖊𝖆𝖙𝖔𝖗 🔲 КΛЯΛКUЯT#0399) tarafından kodlanmıştır.
-message.channel.send(":white_check_mark: **| Tavsiyeniz Başarı İle Bot Sahibime İletildi. Teşekkür Ederiz. | :heart:**")
+message.channel.send("<a:darksartik:849710173441622056> **| Tavsiyeniz Başarı İle Bot Sahibime İletildi. Teşekkür Ederiz. | Al Buda Bizden Olsun <:MiCat_turkcayi:850830543692365835>**")
 gonderilecek_kisi.send(embed).then(i => i.react("⏳"))
 //Volkan Hamarat (🔲 𝕮𝖗𝖊𝖆𝖙𝖔𝖗 🔲 КΛЯΛКUЯT#0399) tarafından kodlanmıştır.
 }
