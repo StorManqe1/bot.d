@@ -17,7 +17,7 @@ const mhelp = new Discord.MessageEmbed()
 
 
 
-<:boruto:849713659264368731> **b!antiraid** : Bildiğiniz Antiraid
+<:boruto:849713659264368731> **!antiraid** : Bildiğiniz Antiraid
 
 <:boruto:849713659264368731> **b!botizni** : Bildiğimiz Bot Sistemi
 
