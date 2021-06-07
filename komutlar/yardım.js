@@ -8,31 +8,31 @@ exports.run = async (client, message) => {
     .setAuthor(``)
     .setTitle(``)
     .setColor("YELLOW")
-    .setThumbnail(
-      ""
+    .setImage("https://cdn.discordapp.com/attachments/826141237471871016/851466409736667136/standard.gif")
+    .setThumbnail(  ""
      
     )
     .setDescription(
       `!davet Yazarak Beni Ekleyebilirsin <a:darksartik:849710173441622056>`
     )
     .addField(
-      `<a:darkrgbdia:849710253401964584>__Moderasyon Yardım__<a:darkrgbdia:849710253401964584>`,
+      `<a:darkrgbdia:849710253401964584>__Moderasyon__<a:darkrgbdia:849710253401964584>`,
       `<a:darksartik:849710173441622056> \`${prefix}moderasyon\``,
       true
     )
     .addField(
-      `<a:darkrgbdia:849710253401964584>__Koruma Yardım__<a:darkrgbdia:849710253401964584>`,
+      `<a:darkrgbdia:849710253401964584>__Koruma__<a:darkrgbdia:849710253401964584>`,
       `<a:darksartik:849710173441622056>  \`${prefix}koruma\` `,
       true
     )
    .addField(
-      `<a:darkrgbdia:849710253401964584>__Eğlence Yardım__<a:darkrgbdia:849710253401964584>`,
+      `<a:darkrgbdia:849710253401964584>__Eğlence__<a:darkrgbdia:849710253401964584>`,
       `<a:darksartik:849710173441622056>  \`${prefix}eğlence\` `,
       true
-
+  
     );
   return message.channel.send(embed);
-
+ 
 
 };
 
