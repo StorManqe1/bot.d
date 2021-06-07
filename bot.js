@@ -633,3 +633,5 @@ client.on("message", message => {
     if(message.content.toLowerCase() == "atlas") 
     return message.channel.send(`top 🎀 `)
 });
+
+/////////////////////////////
