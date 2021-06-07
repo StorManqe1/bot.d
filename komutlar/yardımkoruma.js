@@ -5,9 +5,9 @@ const lembed = new Discord.MessageEmbed()
 
 .then;   
 const mhelp = new Discord.MessageEmbed()
-.setColor("BLUE")
-.setAuthor(`${client.user.username} `, client.user.avatarURL)  
-.setTitle("Boruto Koruma Yardım Menüsü")
+.setColor("BLACK")
+.setAuthor(``)  
+.setTitle("Ravex Koruma Yardım Menüsü")
 .setThumbnail("")
     .setDescription(`
 
@@ -17,23 +17,23 @@ const mhelp = new Discord.MessageEmbed()
 
 
 
-<:boruto:849713659264368731> **!antiraid** : Bildiğiniz Antiraid
+<a:gifsould_yildiz:851471613990797333> **!antiraid** : Bildiğiniz Antiraid
 
-<:boruto:849713659264368731> **b!botizni** : Bildiğimiz Bot Sistemi
+<a:gifsould_yildiz:851471613990797333> **!botizni** : Bildiğimiz Bot Sistemi
 
-<:boruto:849713659264368731> **b!reklamengel** : Sunucunuzdaki Reklamları Engeller
+<a:gifsould_yildiz:851471613990797333> **!reklamengel** : Sunucunuzdaki Reklamları Engeller
 
-<:boruto:849713659264368731> **b!modlog** : Sunucudaki Herşeyi Oraya Atar Denetim Kaydı Gibi
+<a:gifsould_yildiz:851471613990797333> **!modlog** : Sunucudaki Herşeyi Oraya Atar Denetim Kaydı Gibi
 
-<:boruto:849713659264368731> **b!capsengel** : Sunucuda Caps Açılmasına İzin Vermez
+<a:gifsould_yildiz:851471613990797333> **!capsengel** : Sunucuda Caps Açılmasına İzin Vermez
 
-<:boruto:849713659264368731> **b!everengel** : Sunucuda Ever Here Atılmasına İzin Vermez
+<a:gifsould_yildiz:851471613990797333> **!everengel** : Sunucuda Ever Here Atılmasına İzin Vermez
 
-<:boruto:849713659264368731> **b!kanalkoruma** : Birinin Kanal Açmasına Silmesine İzin Vermez
+<a:gifsould_yildiz:851471613990797333> **!kanalkoruma** : Birinin Kanal Açmasına Silmesine İzin Vermez
 
-<:boruto:849713659264368731> **b!rolkoruma** : Birinin Rol Açmasına Silmesine İzin Vermez
+<a:gifsould_yildiz:851471613990797333> **!rolkoruma** : Birinin Rol Açmasına Silmesine İzin Vermez
 
-<:boruto:849713659264368731> **b!güvenlik** : Sunucuya Giren Kullanıcıların Bilgilerini Atar
+<a:gifsould_yildiz:851471613990797333> **!güvenlik** : Sunucuya Giren Kullanıcıların Bilgilerini Atar
 
 
 
