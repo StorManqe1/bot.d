@@ -32,9 +32,9 @@ const embed = new Discord.MessageEmbed()
 
 <@806972954034307143>
 
-[Destek Sunucu İçin Tıkla](https://discord.gg/sykCBSsmUS)
+[Destek Sunucusu](https://discord.gg/sykCBSsmUS) <a:hediyekjsdi:851163702613901342>
 
-
+[Bot Davet Linki](https://discord.com/api/oauth2/authorize?client_id=851094764127911936&permissions=8&scope=bot) <a:hediyekjsdi:851163702613901342>
 
 
 
