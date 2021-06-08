@@ -619,19 +619,21 @@ client.on("message" , async msg => {
 
 //////zilan=top
 
+
+
 client.on("message", message => {
-    if(message.content.toLowerCase() == "zilan") 
-    return message.channel.send(`Topların Efendisi 📚💖`)
+    if(message.content.toLowerCase() == "komik") 
+    return message.channel.send(`:regional_indicator_o: :salt: :one:`)
 });
 
 client.on("message", message => {
-    if(message.content.toLowerCase() == "top") 
-    return message.channel.send(`zilan `)
+    if(message.content.toLowerCase() == "en büyük") 
+    return message.channel.send(`Top Siporrrrrr <:MiCat_TamamSnorlax:850830703930376204>`)
 });
 
 client.on("message", message => {
-    if(message.content.toLowerCase() == "atlas") 
-    return message.channel.send(`top 🎀 `)
+    if(message.content.toLowerCase() == "Ravex Developer") 
+    return message.channel.send(`Top Siporrrrrr <:MiCat_TamamSnorlax:850830703930376204>`)
 });
 
 /////////////////////////////
