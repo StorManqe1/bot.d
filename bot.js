@@ -618,27 +618,18 @@ client.on("message" , async msg => {
 ///////////////////tag
 
 client.on("message", message => {
-    if(message.content.toLowerCase() == "ravex") 
+    if(message.content.toLowerCase() == "ravex yeni") 
     return message.channel.send(`
 
 
-<:ravex2022:850393944863801375> Developer
 
-<@769181920168116275> <a:ravex3top:850733040258121728>
+<a:hediyekjsdi:851163702613901342> !ravex
 
+<a:hediyekjsdi:851163702613901342> !say
 
-<:ravex2022:850393944863801375> Yardım Görevlisi
+<a:hediyekjsdi:851163702613901342> !bansay
 
-<@690223697558372358>
-
-
-<a:MiCat_PikaElma:850830608536305674> Destek Ekibi
-
-<@645992390909231135>
-
-<@834686346115022848>
-
-<@723548751666348172>
+Komutları Eklendi Efendim
 
 
 
