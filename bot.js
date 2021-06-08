@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`!yardım 🧶 Ravex Hizmette 🧶 !davet `, { type:'PLAYING' })
+ client.user.setActivity(`Ravex Bot Hizmette | !yardım !davet`, { type:'PLAYING' })
   
   console.log(":oa3:")
 });
@@ -539,7 +539,7 @@ const laurysas = message.content.toLocaleLowerCase();
     let e = await db.fetch(`sa-as_${message.guild.id}`);
     if (e === "acik") {
       const laurysaas = new Discord.MessageEmbed()
-     .setDescription(`<@${message.author.id}> **Aleyküm Selam, Hoş Geldin** ❤️`)
+     .setDescription(`<@${message.author.id}> **Aleyküm Selam, Hoş Geldin** `)
      .setColor("YELLOW")
       
     return message.channel.send(laurysaas)
@@ -558,7 +558,7 @@ client.on("guildMemberAdd", async member => {
     client.channels.cache
       .get(kanal)
       .send(
-        "🌀 Otomatik Rol Verildi Seninle Beraber `" +
+        " Otomatik Rol Verildi Seninle Beraber `" +
           member.guild.memberCount +
           "` Kişiyiz! Hoşgeldin! `" +
           member.user.username +
@@ -617,23 +617,49 @@ client.on("message" , async msg => {
 
 ///////////////////tag
 
-//////zilan=top
-
-
-
 client.on("message", message => {
-    if(message.content.toLowerCase() == "komik") 
-    return message.channel.send(`:regional_indicator_o: :salt: :one:`)
-});
+    if(message.content.toLowerCase() == "ravex") 
+    return message.channel.send(`
 
-client.on("message", message => {
-    if(message.content.toLowerCase() == "en büyük") 
-    return message.channel.send(`Top Siporrrrrr <:MiCat_TamamSnorlax:850830703930376204>`)
-});
 
-client.on("message", message => {
-    if(message.content.toLowerCase() == "Ravex Developer") 
-    return message.channel.send(`Top Siporrrrrr <:MiCat_TamamSnorlax:850830703930376204>`)
-});
+<:ravex2022:850393944863801375> Developer
 
-/////////////////////////////
+<@769181920168116275> <a:ravex3top:850733040258121728>
+
+
+<:ravex2022:850393944863801375> Yardım Görevlisi
+
+<@690223697558372358>
+
+
+<a:MiCat_PikaElma:850830608536305674> Destek Ekibi
+
+<@645992390909231135>
+
+<@834686346115022848>
+
+<@723548751666348172>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+`)
+});
