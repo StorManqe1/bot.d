@@ -7,27 +7,27 @@ const lembed = new Discord.MessageEmbed()
 const mhelp = new Discord.MessageEmbed()
 .setColor("YELLOW")
 .setAuthor(`${client.user.username} `, client.user.avatarURL)  
-.setTitle("Boruto Moderasyon Komutları")
+.setTitle("Sefa Moderasyon Komutları")
 .setThumbnail("")
     .setDescription(`
 
 
 
-<:boruto:849713659264368731>**!ban** : İstediğiniz Kişiyi Banlar
+**!ban** : İstediğiniz Kişiyi Banlar
 
-<:boruto:849713659264368731> **!küfürengel** : Sunucuda Küfür Etmenize İzin Vermez
+ **!küfürengel** : Sunucuda Küfür Etmenize İzin Vermez
 
-<:boruto:849713659264368731> **!otorol** : Otorol Mesajı Ve Otorol Ayarlar
+ **!otorol** : Otorol Mesajı Ve Otorol Ayarlar
 
-<:boruto:849713659264368731> **!nuke** : Kanalı Siler Tekrardan Açar
+ **!nuke** : Kanalı Siler Tekrardan Açar
 
-<:boruto:849713659264368731> **!sa-as** : Sa Mesajına Cevap Verir
+ **!sa-as** : Sa Mesajına Cevap Verir
 
-<:boruto:849713659264368731> **!yetkilerim** : Sunucudaki Yetkilerinizi Gösterir
+ **!yetkilerim** : Sunucudaki Yetkilerinizi Gösterir
 
-<:boruto:849713659264368731> **!sil** : 1/1000 Arası Msg Siler
+ **!sil** : 1/1000 Arası Msg Siler
 
-<:boruto:849713659264368731> **!say** : Sunucunuzda Kaç Kişi Kaç Kanal Olduğunu Söyler
+ **!say** : Sunucunuzda Kaç Kişi Kaç Kanal Olduğunu Söyler
 
 
 

@@ -7,7 +7,7 @@ const lembed = new Discord.MessageEmbed()
 const mhelp = new Discord.MessageEmbed()
 .setColor("BLACK")
 .setAuthor(``)  
-.setTitle("Ravex Koruma Yardım Menüsü")
+.setTitle("Sefa Koruma Yardım Menüsü")
 .setThumbnail("")
     .setDescription(`
 
@@ -17,23 +17,23 @@ const mhelp = new Discord.MessageEmbed()
 
 
 
-<a:gifsould_yildiz:851471613990797333> **!antiraid** : Bildiğiniz Antiraid
+ **!antiraid** : Bildiğiniz Antiraid
 
-<a:gifsould_yildiz:851471613990797333> **!botizni** : Bildiğimiz Bot Sistemi
+ **!botizni** : Bildiğimiz Bot Sistemi
 
-<a:gifsould_yildiz:851471613990797333> **!reklamengel** : Sunucunuzdaki Reklamları Engeller
+ **!reklamengel** : Sunucunuzdaki Reklamları Engeller
 
-<a:gifsould_yildiz:851471613990797333> **!modlog** : Sunucudaki Herşeyi Oraya Atar Denetim Kaydı Gibi
+ **!modlog** : Sunucudaki Herşeyi Oraya Atar Denetim Kaydı Gibi
 
-<a:gifsould_yildiz:851471613990797333> **!capsengel** : Sunucuda Caps Açılmasına İzin Vermez
+ **!capsengel** : Sunucuda Caps Açılmasına İzin Vermez
 
-<a:gifsould_yildiz:851471613990797333> **!everengel** : Sunucuda Ever Here Atılmasına İzin Vermez
+ **!everengel** : Sunucuda Ever Here Atılmasına İzin Vermez
 
-<a:gifsould_yildiz:851471613990797333> **!kanalkoruma** : Birinin Kanal Açmasına Silmesine İzin Vermez
+ **!kanalkoruma** : Birinin Kanal Açmasına Silmesine İzin Vermez
 
-<a:gifsould_yildiz:851471613990797333> **!rolkoruma** : Birinin Rol Açmasına Silmesine İzin Vermez
+ **!rolkoruma** : Birinin Rol Açmasına Silmesine İzin Vermez
 
-<a:gifsould_yildiz:851471613990797333> **!güvenlik** : Sunucuya Giren Kullanıcıların Bilgilerini Atar
+ **!güvenlik** : Sunucuya Giren Kullanıcıların Bilgilerini Atar
 
 
 

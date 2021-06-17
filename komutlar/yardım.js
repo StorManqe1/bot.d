@@ -8,26 +8,26 @@ exports.run = async (client, message) => {
     .setAuthor(``)
     .setTitle(``)
     .setColor("YELLOW")
-    .setImage("https://cdn.discordapp.com/attachments/826141237471871016/851466409736667136/standard.gif")
+    .setImage("")
     .setThumbnail(  ""
      
     )
     .setDescription(
-      `!davet Yazarak Beni Ekleyebilirsin <a:darksartik:849710173441622056>`
+      `!davet Yazarak Beni Ekleyebilirsin `
     )
     .addField(
-      `<a:darkrgbdia:849710253401964584>__Moderasyon__<a:darkrgbdia:849710253401964584>`,
-      `<a:darksartik:849710173441622056> \`${prefix}moderasyon\``,
+      `__Moderasyon__`,
+      ` \`${prefix}moderasyon\``,
       true
     )
     .addField(
-      `<a:darkrgbdia:849710253401964584>__Koruma__<a:darkrgbdia:849710253401964584>`,
-      `<a:darksartik:849710173441622056>  \`${prefix}koruma\` `,
+      `__Koruma__`,
+      `  \`${prefix}koruma\` `,
       true
     )
    .addField(
-      `<a:darkrgbdia:849710253401964584>__Eğlence__<a:darkrgbdia:849710253401964584>`,
-      `<a:darksartik:849710173441622056>  \`${prefix}eğlence\` `,
+      `__Eğlence__`,
+      `  \`${prefix}eğlence\` `,
       true
   
     );
