@@ -7,7 +7,7 @@ const lembed = new Discord.MessageEmbed()
 const mhelp = new Discord.MessageEmbed()
 .setColor("ORANGE")
 .setAuthor(`${client.user.username} `, client.user.avatarURL)  
-.setTitle("Boruto Eğlence Yardım Menüsü")
+.setTitle("Sefa Eğlence Yardım Menüsü")
 .setThumbnail("")
     .setDescription(`
 
@@ -15,25 +15,25 @@ const mhelp = new Discord.MessageEmbed()
 
     
 
-<a:kelebek4:849711002236223558> **!fbi** : Fbi Çağırır (ironi)
+ **!fbi** : Fbi Çağırır (ironi)
 
-<a:kelebek4:849711002236223558> **!saat** : Size Saati Gösterir
+ **!saat** : Size Saati Gösterir
 
-<a:kelebek4:849711002236223558> **!balıktut** : Balık Tutarsınız 
+ **!balıktut** : Balık Tutarsınız 
 
-<a:kelebek4:849711002236223558> **!aduket-çek** : İstediğiniz Kişiye Aduket Çekersiniz
+ **!aduket-çek** : İstediğiniz Kişiye Aduket Çekersiniz
 
-<a:kelebek4:849711002236223558> **!aşk** : Onla Olan Aşk Oranınızı Ölçer :D
+ **!aşk** : Onla Olan Aşk Oranınızı Ölçer :D
 
-<a:kelebek4:849711002236223558> **!espri** : Bot Size Espri Yapar
+ **!espri** : Bot Size Espri Yapar
 
-<a:kelebek4:849711002236223558> **!vine** : Komik Bi Vine Gösterir
+ **!vine** : Komik Bi Vine Gösterir
 
-<a:kelebek4:849711002236223558> **!kaçcm** : Kaç Cm OLduğunu Söyler :D
+ **!kaçcm** : Kaç Cm OLduğunu Söyler :D
 
-<a:kelebek4:849711002236223558> **!yazankazanır** : Arkadaşınızla Yazan Kazanır Oynarsınız
+ **!yazankazanır** : Arkadaşınızla Yazan Kazanır Oynarsınız
 
-<a:kelebek4:849711002236223558> **!spo @etiket** : İstediğniz Kişinin Spotify Bilgisini Gösterir
+ **!spo @etiket** : İstediğniz Kişinin Spotify Bilgisini Gösterir
 
 
 
