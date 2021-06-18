@@ -610,7 +610,8 @@ client.on("message" , async msg => {
    db.delete(`afkid_${msg.author.id}_${msg.guild.id}`)
    db.delete(`afkAd_${msg.author.id}_${msg.guild.id}`)
     msg.member.setNickname(isim)
-    
+
+
   }
   
 });
@@ -620,7 +621,6 @@ client.on("message" , async msg => {
 client.on("message", message => {
     if(message.content.toLowerCase() == "ravex yeni") 
     return message.channel.send(`
-
 
 
 <a:hediyekjsdi:851163702613901342> !ravex
