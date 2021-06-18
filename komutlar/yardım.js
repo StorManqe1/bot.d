@@ -42,9 +42,8 @@ exports.conf = {
   aliases: [],
   permLevel: 0
 };
-
 exports.help = {
-  name: "yardım",
+  name: "komut-bilgi",
   description: "Yardım Menüsü",
   usage: "yardım"
 };
