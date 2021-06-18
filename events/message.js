@@ -25,10 +25,8 @@ module.exports = message => {
   if (cmd) {
     if (perms < cmd.conf.permLevel) return;
     cmd.run(client, message, params, perms);
+
     
-    client.on("ready", () => {
-  client.channels.cache.get("854825658610221056").join();   
-})
   }
 
 };
