@@ -13,7 +13,7 @@ exports.run = async (client, message) => {
      
     )
     .setDescription(
-      `<:kalpkurabiye:860537958683901952> Atlas Bot Her Daim Hizmette <:kalpkurabiye:860537958683901952>`
+      `<:kalpkurabiye:860537958683901952> YuBu Bot Her Daim Hizmette <:kalpkurabiye:860537958683901952>`
     )
     .addField(
       `__<:akano_selam:860538170801389598>Moderasyon<:akano_selam:860538170801389598>__`,

@@ -27,7 +27,7 @@ const mhelp = new Discord.MessageEmbed()
 
  **!sil** : 1/1000 Arası Msg Siler
 
- **!say** : Sunucunuzda Kaç Kişi Kaç Kanal Olduğunu Söyler
+
 
 
 
