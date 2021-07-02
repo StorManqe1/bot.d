@@ -7,7 +7,7 @@ const lembed = new Discord.MessageEmbed()
 const mhelp = new Discord.MessageEmbed()
 .setColor("YELLOW")
 .setAuthor(`${client.user.username} `, client.user.avatarURL)  
-.setTitle("Sefa Moderasyon Komutları")
+.setTitle("Yubu Moderasyon Komutları")
 .setThumbnail("")
     .setDescription(`
 

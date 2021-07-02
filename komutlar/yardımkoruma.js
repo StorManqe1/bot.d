@@ -7,7 +7,7 @@ const lembed = new Discord.MessageEmbed()
 const mhelp = new Discord.MessageEmbed()
 .setColor("BLACK")
 .setAuthor(``)  
-.setTitle("Sefa Koruma Yardım Menüsü")
+.setTitle("Yubu Koruma Yardım Menüsü")
 .setThumbnail("")
     .setDescription(`
 

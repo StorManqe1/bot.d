@@ -7,7 +7,7 @@ const lembed = new Discord.MessageEmbed()
 const mhelp = new Discord.MessageEmbed()
 .setColor("ORANGE")
 .setAuthor(`${client.user.username} `, client.user.avatarURL)  
-.setTitle("Sefa Eğlence Yardım Menüsü")
+.setTitle("YuBu Eğlence Yardım Menüsü")
 .setThumbnail("")
     .setDescription(`
 
