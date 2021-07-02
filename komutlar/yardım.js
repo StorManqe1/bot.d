@@ -13,7 +13,7 @@ exports.run = async (client, message) => {
      
     )
     .setDescription(
-      `!davet Yazarak Beni Ekleyebilirsin `
+      `Atlas Bot Her Daim Hizmette `
     )
     .addField(
       `__Moderasyon__`,
