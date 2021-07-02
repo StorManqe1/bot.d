@@ -7,26 +7,26 @@ exports.run = async (client, message) => {
   const embed = new Discord.MessageEmbed()
     .setAuthor(``)
     .setTitle(``)
-    .setColor("YELLOW")
-    .setImage("")
+    .setColor("PURPLE")
+    .setImage("https://media.discordapp.net/attachments/608711485849337856/860395805692657685/image0_1.gif")
     .setThumbnail(  ""
      
     )
     .setDescription(
-      `Atlas Bot Her Daim Hizmette `
+      `<:kalpkurabiye:860537958683901952> Atlas Bot Her Daim Hizmette <:kalpkurabiye:860537958683901952>`
     )
     .addField(
-      `__Moderasyon__`,
+      `__<:akano_selam:860538170801389598>Moderasyon<:akano_selam:860538170801389598>__`,
       ` \`${prefix}moderasyon\``,
       true
     )
     .addField(
-      `__Koruma__`,
+      `__<:akano_selam:860538170801389598>Koruma<:akano_selam:860538170801389598>__`,
       `  \`${prefix}koruma\` `,
       true
     )
    .addField(
-      `__Eğlence__`,
+      `__<:akano_selam:860538170801389598>Eğlence<:akano_selam:860538170801389598>__`,
       `  \`${prefix}eğlence\` `,
       true
   
@@ -39,11 +39,11 @@ exports.run = async (client, message) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ["Yardım","y","bilgi"],
   permLevel: 0
 };
 exports.help = {
-  name: "komut-bilgi",
+  name: "yardım",
   description: "Yardım Menüsü",
   usage: "yardım"
 };
