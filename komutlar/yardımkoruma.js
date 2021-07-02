@@ -64,7 +64,7 @@ const mhelp = new Discord.MessageEmbed()
 
 `) 
        .setImage("")
-       .addField(`»  Bot Bağlantıları`, `  [Bot Davet Linki](https://discord.com/api/oauth2/authorize?client_id=851094764127911936&permissions=8&scope=bot) `)//websiteniz yoksa  **|** [Web Sitesi]() yeri silebilirsiniz 
+       .addField(`»  Bot Bağlantıları`, `  [Bot Davet Linki](https://discord.com/api/oauth2/authorize?client_id=860527348729511966&permissions=8&scope=bot) `)//websiteniz yoksa  **|** [Web Sitesi]() yeri silebilirsiniz 
         .setFooter(`${message.author.username} Tarafından İstendi.`, message.author.avatarURL)
 message.channel.send(mhelp)
 .then; const sembed = new Discord.MessageEmbed()

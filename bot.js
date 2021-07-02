@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`Ömer ❤️ NeverMind`, { type:'PLAYING' })
+ client.user.setActivity(`Develop Ravex#1000 ❤️`, { type:'PLAYING' })
   
   console.log(":oa3:")
 });
