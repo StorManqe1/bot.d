@@ -5,7 +5,7 @@ const lembed = new Discord.MessageEmbed()
 
 .then;   
 const mhelp = new Discord.MessageEmbed()
-.setColor("PiNK")
+.setColor("#eb69e9")
 .setAuthor(`${client.user.username} `, client.user.avatarURL)  
 .setTitle("Yubu Moderasyon Komutları")
 .setThumbnail("")
@@ -61,7 +61,7 @@ const mhelp = new Discord.MessageEmbed()
 
 `) 
        .setImage("https://media.discordapp.net/attachments/857714045251878972/859707586185003028/c36004559186539aaa1802b8bc09de9b.gif")
-       .addField(`»  Bot Bağlantıları`, `  [Bot Davet Linki](https://discord.com/api/oauth2/authorize?client_id=860527348729511966&permissions=8&scope=bot) `)//websiteniz yoksa  **|** [Web Sitesi]() yeri silebilirsiniz 
+       .addField(`»  Bot Bağlantıları`, `  [Bot Davet Linki](https://discord.com/api/oauth2/authorize?client_id=860532935559479336&permissions=8&scope=bot) `)//websiteniz yoksa  **|** [Web Sitesi]() yeri silebilirsiniz 
         .setFooter(`${message.author.username} Tarafından İstendi.`, message.author.avatarURL)
 message.channel.send(mhelp)
 .then; const sembed = new Discord.MessageEmbed()

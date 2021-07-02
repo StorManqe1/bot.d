@@ -8,33 +8,13 @@ exports.run = async(client, message)=> {
     
 const embed = new Discord.MessageEmbed()
 //.setAuthor(`${user.tag} adlı kullanıcının avatarı:`)
- .setDescription(`<@${message.author.id}>   İşte Bizim Ekibimiz
+ .setDescription(`<@${message.author.id}> Dostum Beni Eklemek Mi İstedin
 
-<:ravex2022:850393944863801375> Developer
+Dostum Çok Teşekkürler Yeni Arkadaşlar Edineceğim İçin
+Çok Heyecanlıyım Ehehe
 
-<@769181920168116275> <a:ravex3top:850733040258121728>
-
-
-<:ravex2022:850393944863801375> Yardım Görevlisi
-
-<@690223697558372358>
-
-
-<a:MiCat_PikaElma:850830608536305674> Destek Ekibi
-
-<@645992390909231135>
-
-<@834686346115022848>
-
-<@723548751666348172>
-
-<a:para:849709440847577119> Sponsor
-
-<@806972954034307143>
-
-[Destek Sunucusu](https://discord.gg/sykCBSsmUS) <a:hediyekjsdi:851163702613901342>
-
-[Bot Davet Linki](https://discord.com/api/oauth2/authorize?client_id=851094764127911936&permissions=8&scope=bot) <a:hediyekjsdi:851163702613901342>
+He Buda Davet Linkim :D
+[Bot Davet Linki](https://discord.com/api/oauth2/authorize?client_id=860532935559479336&permissions=8&scope=bot) 
 
 
 
@@ -56,10 +36,10 @@ const embed = new Discord.MessageEmbed()
 
 
 `)
-.setImage("https://cdn.discordapp.com/attachments/826141237471871016/851466409736667136/standard.gif") 
+.setImage("https://media.discordapp.net/attachments/857714045251878972/860420448482754580/13142.gif") 
 .setTimestamp()
-.setColor('#f6ff00')
-.setFooter(`Ravex Bot Ekip`)
+.setColor('ORANGE')
+.setFooter(`Dvt Dvt Dvt Seri`)
 message.channel.send(embed)
  }
 }
