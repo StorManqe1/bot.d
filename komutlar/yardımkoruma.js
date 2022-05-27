@@ -17,23 +17,23 @@ const mhelp = new Discord.MessageEmbed()
 
 
 
- **!antiraid** : Bildiğiniz Antiraid
+ **.antiraid** : Bildiğiniz Antiraid
 
- **!botizni** : Bildiğimiz Bot Sistemi
+ **.botizni** : Bildiğimiz Bot Sistemi
 
- **!reklamengel** : Sunucunuzdaki Reklamları Engeller
+ **.reklamengel** : Sunucunuzdaki Reklamları Engeller
 
- **!modlog** : Sunucudaki Herşeyi Oraya Atar Denetim Kaydı Gibi
+ **.modlog** : Sunucudaki Herşeyi Oraya Atar Denetim Kaydı Gibi
 
- **!capsengel** : Sunucuda Caps Açılmasına İzin Vermez
+ **.capsengel** : Sunucuda Caps Açılmasına İzin Vermez
 
- **!everengel** : Sunucuda Ever Here Atılmasına İzin Vermez
+ **.everengel** : Sunucuda Ever Here Atılmasına İzin Vermez
 
- **!kanalkoruma** : Birinin Kanal Açmasına Silmesine İzin Vermez
+ **.kanalkoruma** : Birinin Kanal Açmasına Silmesine İzin Vermez
 
- **!rolkoruma** : Birinin Rol Açmasına Silmesine İzin Vermez
+ **.rolkoruma** : Birinin Rol Açmasına Silmesine İzin Vermez
 
- **!güvenlik** : Sunucuya Giren Kullanıcıların Bilgilerini Atar
+ **.güvenlik** : Sunucuya Giren Kullanıcıların Bilgilerini Atar
 
 
 
