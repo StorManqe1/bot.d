@@ -7,25 +7,25 @@ const lembed = new Discord.MessageEmbed()
 const mhelp = new Discord.MessageEmbed()
 .setColor("#eb69e9")
 .setAuthor(`${client.user.username} `, client.user.avatarURL)  
-.setTitle("Yubu Moderasyon Komutları")
-.setThumbnail("")
-    .setDescription(`
+.setTitle(".moderasyon yardım menüsünü görüyorsunuz.")
+.setThumbnail("https://media.discordapp.net/attachments/977159991817564240/978361988134633512/png.png?width=630&height=630")
+    .setDescription(`Komutları uygulamadan önce doğru düşündüğünüzden emin olun.
 
 
 
-**!ban** : İstediğiniz Kişiyi Banlar
+**.ban** : İstediğiniz kişiyi banlar.
 
- **!küfürengel** : Sunucuda Küfür Etmenize İzin Vermez
+ **küfürengel** : Sunucuda küfür etmenize izin vermez.
 
- **!otorol** : Otorol Mesajı Ve Otorol Ayarlar
+ **.otorol** : Otorol mesajı ve otorol ayarlar.
 
- **!nuke** : Kanalı Siler Tekrardan Açar
+ **.nuke** : Kanalı siler tekrardan açar.
 
- **!sa-as** : Sa Mesajına Cevap Verir
+ **.sa-as** : Sa mesajına cevap verir.
 
- **!yetkilerim** : Sunucudaki Yetkilerinizi Gösterir
+ **.yetkilerim** : Sunucudaki yetkilerinizi gösterir.
 
- **!sil** : 1/1000 Arası Msg Siler
+ **.sil** : 1/1000 Arası mesaj siler.
 
 
 
