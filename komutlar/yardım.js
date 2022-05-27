@@ -7,7 +7,7 @@ exports.run = async (client, message) => {
   const embed = new Discord.MessageEmbed()
     .setAuthor(``)
     .setTitle(``)
-    .setColor("PURPLE")
+    .setColor("red")
     .setImage("https://media.discordapp.net/attachments/608711485849337856/860395805692657685/image0_1.gif")
     .setThumbnail(  ""
      
