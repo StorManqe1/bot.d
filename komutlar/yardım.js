@@ -7,26 +7,26 @@ exports.run = async (client, message) => {
   const embed = new Discord.MessageEmbed()
     .setAuthor(``)
     .setTitle(``)
-    .setColor("red")
-    .setImage("https://media.discordapp.net/attachments/608711485849337856/860395805692657685/image0_1.gif")
+    .setColor("RED")
+    .setImage("https://media.discordapp.net/attachments/977159991817564240/978361854902542367/noble_animationgiff.gif")
     .setThumbnail(  ""
      
     )
     .setDescription(
-      `<:kalpkurabiye:860537958683901952> YuBu Bot Her Daim Hizmette <:kalpkurabiye:860537958683901952>`
+      `.yardım menüsü hakkında bilgiler aşağıdadır.`
     )
     .addField(
-      `__<:akano_selam:860538170801389598>Moderasyon<:akano_selam:860538170801389598>__`,
+      `Discord güvenliği.`,
       ` \`${prefix}moderasyon\``,
       true
     )
     .addField(
-      `__<:akano_selam:860538170801389598>Koruma<:akano_selam:860538170801389598>__`,
+      `Discord rol, kanal koruması.`,
       `  \`${prefix}koruma\` `,
       true
     )
    .addField(
-      `__<:akano_selam:860538170801389598>Eğlence<:akano_selam:860538170801389598>__`,
+      `Discord eğlence menüsü.`,
       `  \`${prefix}eğlence\` `,
       true
   
