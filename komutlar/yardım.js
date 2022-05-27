@@ -17,7 +17,7 @@ exports.run = async (client, message) => {
     )
     .addField(
       `Discord güvenliği.`,
-      ` \`${prefix}moderasyon\``,
+      ` \`${prefix}\``,
       true
     )
     .addField(
