@@ -498,17 +498,17 @@ if (db.has(`nordxmodlog${oldMember.guild.id}`) === false) return;
 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
 
-    const embed = new Discord.MessageEmbed()
-    .setColor("RANDOM")
-    .setDescription(`Bir kullanıcı \`${newUserChannel.name}\` isimli sesli kanala giriş yaptı!`)
-    kanal.send(embed);
+    // const embed = new Discord.MessageEmbed()
+    // .setColor("RANDOM")
+   //  .setDescription(`Bir kullanıcı \`${newUserChannel.name}\` isimli sesli kanala giriş yaptı!`)
+   //  kanal.send(embed);
     
   } else if(newUserChannel === undefined){
 
-    const embed = new Discord.MessageEmbed()
-    .setColor("RANDOM")
-    .setDescription(`Biri ${newUserChannel.name} sesli kanaldan çıkış yaptı!`)
-    kanal.send(embed);
+   //  const embed = new Discord.MessageEmbed()
+    // .setColor("RANDOM")
+   //  .setDescription(`Biri ${newUserChannel.name} sesli kanaldan çıkış yaptı!`)
+   //  kanal.send(embed);
     
   }
 });
