@@ -6,13 +6,13 @@ let tavsiye = args.join(" ").slice(0);
   const sebep2 = new Discord.MessageEmbed()
   .setDescription(` \`${message.author.username}\` **Tavsiyenize Yazar mısın ?**`)
   .setColor("#00ff88")
-  .setFooter(`Ravex Tavsiye Ettiğiniz İçin Teşşekür Ediyor`)
+  .setFooter(`Simple Tavsiye Ettiğiniz İçin Teşşekür Ediyor`)
   if(!tavsiye) return message.channel.send(sebep2);
 let user = message.author.tag;
 let guild = message.guild.name;
 let guildid = message.guild.id;
 let kanal = message.channel.name;
-let gonderilecek_kisi = bot.users.cache.get("951737371412549672")//rapor edilecek kişinin idsi
+let gonderilecek_kisi = bot.users.cache.get("965886720606343178")//rapor edilecek kişinin idsi
 let embed = new Discord.MessageEmbed()
 .setTitle("Tavsiye Bildiri")
 .setThumbnail(bot.user.avatarURL())
@@ -21,10 +21,10 @@ let embed = new Discord.MessageEmbed()
 .addField("Sunucu ID", guildid)
 .addField("Rapor Eden", user, true)
 .setColor("GOLD")
-   message.react("");
+   message.react("✅");
 
 // Batuhan.exe tarafından kodlanmıştır.
-message.channel.send("**| Tavsiyeniz Başarı İle Bot Sahibime İletildi. Teşekkür Ederiz. | Al Buda Bizden Olsun**")
+message.channel.send("**» Tavsiyeniz Başarı İle Bot Sahibime İletildi. Teşekkür Ederiz. » Cansınız efendim <3**")
 gonderilecek_kisi.send(embed).then(i => i.react("⏳"))
 // Batuhan.exe tarafından kodlanmıştır.
 }
