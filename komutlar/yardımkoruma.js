@@ -5,13 +5,13 @@ const lembed = new Discord.MessageEmbed()
 
 .then;   
 const mhelp = new Discord.MessageEmbed()
-.setColor("RED")
+.setColor("PURPLE")
 .setAuthor(``)  
 .setTitle("Koruma yardım menüsü.")
-.setThumbnail("https://media.discordapp.net/attachments/977159991817564240/978361988134633512/png.png?width=630&height=630")
+.setThumbnail("https://images-ext-2.discordapp.net/external/waXqStDTzUTlriW4dC_oG9mdLIthXD_AFZb7rEwhtvg/https/i.pinimg.com/originals/25/79/99/25799939906655b8796193a8f4ba9b3b.gif?width=600&height=450")
     .setDescription(`Komutları uygulamadan önce doğru düşündüğünüzden emin olun.
 
- **.antiraid** : Bildiğiniz antiraid, saldırı koruması.
+ **» .antiraid** : Bildiğiniz antiraid, saldırı koruması.
 
  **.botizni** : Bildiğimiz bot sistemi.
 
@@ -58,7 +58,7 @@ const mhelp = new Discord.MessageEmbed()
 
 `) 
        .setImage("")
-       .addField(`»  Discordumuz:`, `  [Bot Davet Linki](https://discord.gg/Dd2mWQZQRT) `)//Discord noble rp
+       .addField(`»  Discordumuz:`, `  [ Discord Davetimiz ](https://discord.gg/spcCXSxrew) `)// Discordunuz
         .setFooter(`${message.author.username} Tarafından İstendi.`, message.author.avatarURL)
 message.channel.send(mhelp)
 .then; const sembed = new Discord.MessageEmbed()
