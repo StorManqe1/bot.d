@@ -1,41 +1,38 @@
 const Discord = require("discord.js");
 exports.run = async (client, message, args) => {
   
-    if (!message.member.hasPermission("MENTION_EVERYONE")) {
+    if (!message.member.hasPermission("SPEAK")) {
     const embed = new Discord.MessageEmbed()
-      .setDescription("```Ne yazık ki bu komutu kullanmaya yetkin yok.```")
+      .setDescription("Ne yazık ki bu komutu kullanmaya yetkin yok.")
+//   .setImage('https://c.tenor.com/JOjYkhabalwAAAAS/artixtr.gif')
       .setColor("BLUE");
  
     message.channel.send(embed);
     return;
   }
-  
+  // https://images-ext-2.discordapp.net/external/waXqStDTzUTlriW4dC_oG9mdLIthXD_AFZb7rEwhtvg/https/i.pinimg.com/originals/25/79/99/25799939906655b8796193a8f4ba9b3b.gif?width=600&height=450
   const embed = new Discord.MessageEmbed()
     .setColor("BLUE")
     .setThumbnail("https://images-ext-2.discordapp.net/external/waXqStDTzUTlriW4dC_oG9mdLIthXD_AFZb7rEwhtvg/https/i.pinimg.com/originals/25/79/99/25799939906655b8796193a8f4ba9b3b.gif?width=600&height=450")
     .setDescription(
-      `*** SUNUCU AKTİFTİR ***
-
-**Sunucuya Giriş Sağlayabilirsiniz, Sorularınız Veya Sorunlarınız İçin Destek Odalarını Kullanabilirsiniz!**
+      `*** SUNUCUYA RESTART ATILMIŞTIR, GEREKLİ BİLGİLER AŞAĞIDADIR.***
 
 **𝐒𝐮𝐧𝐮𝐜𝐮 𝐈𝐏 : N/A
 𝐓𝐞𝐚𝐦𝐒𝐩𝐞𝐚𝐤 𝐈𝐏 : N/A**
 
-***SİMPLE HOSTİNG / x / SİMPLE HOSTİNG***
+***SİMPLE HOSTİNG / X / SİMPLE HOSTİNG***
 
 `
     )
     .setImage("https://images-ext-2.discordapp.net/external/waXqStDTzUTlriW4dC_oG9mdLIthXD_AFZb7rEwhtvg/https/i.pinimg.com/originals/25/79/99/25799939906655b8796193a8f4ba9b3b.gif?width=600&height=450");
   client.channels.cache.get("992529074675257425").send(embed);
 
-  const ping = ["@here"];
+  const ping = ["@everyone"];
   client.channels.cache.get("992529074675257425").send(ping);
 
-message.channel
- // let gonderilecek_kisi = bot.users.cache.get("965886720606343178")//rapor edilecek kişinin idsi
-    .send("Başarılı bir şekilde aktif bildirisi geçildi.")
+  message.channel
+    .send("Başarılı bir şekilde restart bildirisi geçildi.")
     .then((message) => message.delete({ timeout: 5000 }));
-  
 };
 exports.conf = {
   enabled: true,
@@ -45,7 +42,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "aktif",
+  name: "restart",
   description: "",
-  usage: "",
+  usage: "restart",
 };

@@ -4,14 +4,14 @@ exports.run = async (client, message, args) => {
     if (!message.member.hasPermission("MENTION_EVERYONE")) {
     const embed = new Discord.MessageEmbed()
       .setDescription("Ne yazık ki bu komutu kullanmaya yetkin yok.")
-      .setColor("RED");
+      .setColor("BLUE");
  
     message.channel.send(embed);
     return;
   }
   
   const embed = new Discord.MessageEmbed()
-    .setColor("RED")
+    .setColor("BLUE")
     .setThumbnail("https://images-ext-2.discordapp.net/external/waXqStDTzUTlriW4dC_oG9mdLIthXD_AFZb7rEwhtvg/https/i.pinimg.com/originals/25/79/99/25799939906655b8796193a8f4ba9b3b.gif?width=600&height=450")
     .setDescription(
       `*** SUNUCU BAKIMDA ***
