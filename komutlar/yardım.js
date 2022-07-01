@@ -7,17 +7,17 @@ exports.run = async (client, message) => {
   const embed = new Discord.MessageEmbed()
     .setAuthor(``)
     .setTitle(``)
-    .setColor("RED")
-    .setImage("https://media.discordapp.net/attachments/977159991817564240/978361854902542367/noble_animationgiff.gif")
+    .setColor("PURPLE")
+    .setImage("https://images-ext-2.discordapp.net/external/waXqStDTzUTlriW4dC_oG9mdLIthXD_AFZb7rEwhtvg/https/i.pinimg.com/originals/25/79/99/25799939906655b8796193a8f4ba9b3b.gif?width=600&height=450")
     .setThumbnail(  ""
      
     )
     .setDescription(
-      `.yardım menüsü hakkında bilgiler aşağıdadır.`
+      `Yardım menüsü hakkında bilgiler aşağıdadır.`
     )
     .addField(
       `Discord güvenliği.`,
-      ` \`${prefix}\``,
+      ` \`${prefix}moderasyon\``,
       true
     )
     .addField(
@@ -37,7 +37,7 @@ exports.run = async (client, message) => {
 };
 
 exports.conf = {
-  enabled: true,
+  enabled: false,
   guildOnly: false,
   aliases: ["Yardım","y","bilgi"],
   permLevel: 0

@@ -22,7 +22,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`Noble RP Guard BOT`, { type:'PLAYING' }) // bot durumu
+ client.user.setActivity(`Bakımda!`, { type:'PLAYING' }) // bot durumu
   
   console.log(":oa3:")
 });
