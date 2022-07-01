@@ -25,9 +25,9 @@ Rolü Etiketleyemiyorsan **Rolün Etiketleme Seçeneğini Aktif Etmeyi Unutma**
 `);
 
   message.channel.send(`╔▬▬▬▬▬▬▬▬Boruto▬▬▬▬▬▬▬▬▬
-║► <a:darkonay:849710136997969921> Otorol Aktif Edildi.
-║► <a:darkonay:849710136997969921> **${rol}** Olarak Güncelledim! 
-║► <a:darkonay:849710136997969921> Kayıt Kanalını **${kanal}** Olarak Güncelledim! 
+║► Otorol Aktif Edildi.
+║► **${rol}** Olarak Güncelledim! 
+║► Kayıt Kanalını **${kanal}** Olarak Güncelledim! 
 ╚▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬`)
 
   db.set(`otoRL_${message.guild.id}`, rol.id);

@@ -12,20 +12,21 @@ exports.run = (client, message, args) => {
       "__**Oto-Rol-Ayarla**__  **Otorolü Ayarlar.**\n Örnek: `!oto-rol-ayarla @rol #log` \n \n __**!otorol-msg**__   **Otorol Mesajını Ayarlar.** \n Örnek: `!otorol-msg -server-, Sunucumuza Hoşgeldin, -uye-! -rol- Adlı Rolün Başarı İle Verildi Seninle Beraber, **-uyesayisi-** Kişiyiz`"
     )
 
-    .addField(
-      "__**Kullanabileceğiniz Komutlar **__",
-      `
-**-uye-**  \`Üyeyi Etiketler.\`
-**-rol-**  \`Rolün İsmini Ekler.\`
-**-server-**  \`Server İsmini Yazar.\`
-**-uyesayisi-** >> \`Üye Sayısını Atar.\`
-**-botsayisi-**  \`Bot Sayısını Atar.\`
-**-kanalsayisi-**  \`Kanal Sayısını Atar.\`
-**-bolge-**  \`Sunucu Bölgesinin İsmini Atar.\`
-**-kalanuye-**  \`Hedefe Kaç Kişi Kalmış Gösterir.\`
-**-hedefuye-**  \`Hedef Rakamı Gösterir.\`
-`
-    )
+    //.addField(
+      //"__**Kullanabileceğiniz Komutlar **__",
+      //`
+// **-uye-**  \`Üyeyi Etiketler.\`
+// **-rol-**  \`Rolün İsmini Ekler.\`
+// **-server-**  \`Server İsmini Yazar.\`
+// **-uyesayisi-** >> \`Üye Sayısını Atar.\`
+// **-botsayisi-**  \`Bot Sayısını Atar.\`
+// **-kanalsayisi-**  \`Kanal Sayısını Atar.\`
+// **-bolge-**  \`Sunucu Bölgesinin İsmini Atar.\`
+// **-kalanuye-**  \`Hedefe Kaç Kişi Kalmış Gösterir.\`
+// **-hedefuye-**  \`Hedef Rakamı Gösterir.\`
+// `
+  //   )
+  
   message.channel.send(embed);
 };
 exports.conf = {

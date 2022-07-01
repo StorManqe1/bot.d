@@ -4,7 +4,7 @@ const ayarlar = require('../ayarlar.json')
 let prefix = ayarlar.prefix
 
 exports.run = (client, message, args) => {
-if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(new Discord.MessageEmbed().setColor('BLUE').setDescription("<a:notik:844598526843027486>  **Bu Komutu Kullanmak İçin `Mesajları Yönet` Yetkisine Sahip Omalısınız!**"))
+if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(new Discord.MessageEmbed().setColor('BLUE').setDescription("  **Bu Komutu Kullanmak İçin `Mesajları Yönet` Yetkisine Sahip Omalısınız!**"))
 const yrnex = args.join(` `);
   if(!yrnex) message.channel.send(new Discord.MessageEmbed()
   .addField("Hatalı Kullanım",`Örnek Kullanım: **-sa-as aç & kapat**`)
@@ -13,7 +13,7 @@ const yrnex = args.join(` `);
 if(yrnex === "aç") {
 db.set(`sa-as_${message.guild.id}`, `acik`);
 message.channel.send(new Discord.MessageEmbed()
-  .addField("İşlem Başarılı",`Sa-As Sistemi Başarılı Bir Şekilde Açıldı <a:darksartik:849710173441622056>  `)
+  .addField("İşlem Başarılı",`Sa-As Sistemi Başarılı Bir Şekilde Açıldı  `)
   .setColor("GREEN")
 .setFooter(""))
 
@@ -21,7 +21,7 @@ message.channel.send(new Discord.MessageEmbed()
 else if(yrnex === "kapat") {
 db.set(`sa-as_${message.guild.id}`, `kapali`);
 message.channel.send(new Discord.MessageEmbed()
-  .addField("İşlem Başarılı",`Sa-As Sistemi Başarılı Bir Şekilde Kapatıldı <a:darksartik:849710173441622056> `)
+  .addField("İşlem Başarılı",`Sa-As Sistemi Başarılı Bir Şekilde Kapatıldı `)
   .setColor("RED")
   .setFooter(""))
 }

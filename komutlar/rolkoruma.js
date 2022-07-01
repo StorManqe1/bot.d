@@ -15,7 +15,7 @@ let prefix = ayarlar.prefix
   }
    if (args[0] === 'kapat') {
     db.delete(`rolk_${message.guild.id}`)
-    message.channel.send(`Rol Koruma Başarıyla Kapatıldı! <a:darksartik:849710173441622056>`)
+    message.channel.send(`Rol Koruma Başarıyla Kapatıldı!`)
   }
 };
 exports.conf = {

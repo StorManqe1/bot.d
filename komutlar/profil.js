@@ -56,17 +56,17 @@ exports.run = function(client, message, args) {
       .setThumbnail(üye.displayAvatarURL)
       .addField(
         "Profil",
-        `**Ad <a:xd4:846009795374612511>  ** ${üye.username +
+        `**Ad   ** ${üye.username +
           "#" +
-          üye.discriminator}\n**ID <a:xd4:846009795374612511>  ** ${
+          üye.discriminator}\n**ID  ** ${
           üye.id
         }\n**Son Mesaj: ** ${
           üye.lastMessage
-        }\n**Son Mesaj İD <a:xd4:846009795374612511>  ** ${
+        }\n**Son Mesaj İD  ** ${
           üye.lastMessageID
         }\n**Oynadığı Oyun: ** ${
           üye.presence.game ? üye.presence.game.name : "Şu an oyun oynamıyor"
-        }\n**Durum** ${durm}\n**Oluşturulduğu Tarih <a:xd4:846009795374612511>  ** ${`${moment(
+        }\n**Durum** ${durm}\n**Oluşturulduğu Tarih ** ${`${moment(
           üye.createdAt
         ).format("DD")} ${aylar[moment(üye.createdAt).format("MM")]} ${moment(
           üye.createdAt
@@ -74,7 +74,7 @@ exports.run = function(client, message, args) {
           üye.bot
             ? "Evet "
             : "Hayır"
-        }\n**Rolleri <a:xd4:846009795374612511>  ** ${message.guild.members
+        }\n**Rolleri  ** ${message.guild.members
           .get(üye.id)
           .roles.filter(r => r.name !== "@everyone")
           .map(r => r)
@@ -90,19 +90,19 @@ exports.run = function(client, message, args) {
       .setThumbnail(message.author.avatarURL())
       .addField(
         "Profil",
-        `**Ad <a:xd4:846009795374612511> ** ${message.author.username +
+        `**Ad  ** ${message.author.username +
           "#" +
-          message.author.discriminator}\n**ID <a:xd4:846009795374612511>  ** ${
+          message.author.discriminator}\n**ID   ** ${
           message.author.id
-        }\n**Son Mesaj <a:xd4:846009795374612511>  ** ${
+        }\n**Son Mesaj   ** ${
           message.author.lastMessage
-        }\n**Son Mesaj İD <a:xd4:846009795374612511>  ** ${
+        }\n**Son Mesaj İD  ** ${
           message.author.lastMessageID
-        }\n**Oynadığı Oyun <a:xd4:846009795374612511>  ** ${
+        }\n**Oynadığı Oyun  ** ${
           message.author.presence.game
             ? message.author.presence.game.name
             : "Şu an oyun oynamıyor"
-        }\n**Durum** ${durm}\n**Oluşturulduğu Tarih <:artiz:844598674549243944>  ** ${`${moment(
+        }\n**Durum** ${durm}\n**Oluşturulduğu Tarih   ** ${`${moment(
           message.author.createdAt
         ).format("DD")} ${
           aylar[moment(message.author.createdAt).format("MM")]
@@ -112,7 +112,7 @@ exports.run = function(client, message, args) {
           message.author.bot
             ? "Evet"
             : "Hayır"
-        }\n**Roller <:artiz:844598674549243944>  ** ${message.guild.members.cache
+        }\n**Roller  ** ${message.guild.members.cache
           .get(message.author.id)
           .roles.cache.filter(r => r.name !== "@everyone")
           .map(r => r)

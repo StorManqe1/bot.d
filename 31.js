@@ -507,7 +507,7 @@ if (db.has(`nordxmodlog${oldMember.guild.id}`) === false) return;
 
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
-    .setDescription(`Biri sesli kanaldan çıkış yaptı!`)
+    .setDescription(`Biri ${newUserChannel.name} sesli kanaldan çıkış yaptı!`)
     kanal.send(embed);
     
   }
@@ -516,7 +516,7 @@ if (db.has(`nordxmodlog${oldMember.guild.id}`) === false) return;
 //ModlogSon
 
 client.on('ready', ()  => {
-let kanal = client.channels.cache.get("846836053506916362")
+let kanal = client.channels.cache.get("992143651318800394")
 if(kanal === undefined){
 console.log("kanalı bulamıyorum.")
 } else {
