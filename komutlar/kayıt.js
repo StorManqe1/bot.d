@@ -13,8 +13,11 @@ exports.run = async (client, message, args) => {
     
     const yetkiliuyarı = new MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())
-.setDescription(`Bu Komutu Kullanmak İçin <@&${yetkili}> Yetkisine Sahip Olman Gerek!`)
+.setDescription(`Bu Komutu Kullanmak İçin <@&991682764111872014> Yetkisine Sahip Olman Gerek!`)
 .setColor(`RED`)
+    
+    const ping = "<@&991682764111872014>";
+  client.channels.cache.get("992529074675257425").send(ping);
 
     if(!message.member.roles.cache.has(yetkili)) return message.channel.send(yetkiliuyarı)
 

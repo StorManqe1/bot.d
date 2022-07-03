@@ -613,7 +613,185 @@ client.on("message" , async msg => {
 
 
   }
-  
+  // İSİM YAŞ İSİM DEĞİŞTİRME 
+
+client.on("guildMemberAdd", member => {
+  let tag = ayarlar.tag;
+  //
+  member.setNickname(`${tag} İsim • Yaş`);
+});
+
+// İSİM YAŞ İSİM DEĞİŞTİRME SON
+
+
+
+
+
+
+//BOT ROLÜ
+client.on(`guildMemberAdd`, async member => {
+  let botrol = ayarlar.botROL;
+if(!member.bot) return;
+member.roles.add(botrol)
+})
+
+// BOT ROLÜ SON
+
+
+
+
+// kayıtsız rolü
+
+client.on(`guildMemberAdd`, async member => {
+  let kayıtsızROL = ayarlar.kayıtsızROL;
+if(member.bot) return;
+member.roles.add(kayıtsızROL)
+})
+
+/// kayıtsız rolü son
+
+
+
+
+
+
+// BOT OTOROL
+
+client.on('guildMemberAdd', async member => {
+if(member.user.bot) {
+  const botROL = ayarlar.botROL
+member.roles.add(botROL)
+}
+})
+// GİRİŞ 
+  client.on("guildMemberAdd", member => { 
+    const moment = require('moment');
+  const kanal = ayarlar.giriskanal;
+  let user = client.users.cache.get(member.id);
+  require("moment-duration-format");
+    const tarih = new Date().getTime() - user.createdAt.getTime();  
+  const embed = new Discord.MessageEmbed()
+  let rol = ayarlar.kayıtsızROL
+ member.roles.add(rol)
+
+  var kontrol;
+if (tarih < 1296000000) kontrol = 'Bu Kullanıcı **Şüpheli**'
+if (tarih > 1296000000) kontrol = 'Bu Kullanıcı **Güvenli**'
+  moment.locale("tr");
+  let kanal1 = client.channels.cache.find(x => x.id === kanal);
+    let giris = new Discord.MessageEmbed()
+    .setDescription(`
+ » • Hoşgeldin **${member}**
+ 
+ » • Seninle birlikte **${member.guild.memberCount}** kişiyiz.
+ 
+ » • [ **${ayarlar.tag}** ] Tagımızı alarak ekibimize katılabilirsin.
+ 
+ » • <@&${ayarlar.yetkiliROL}> rolündekiler seninle ilgilenecektir.
+ 
+ » •   ${kontrol} 
+ 
+ » • Hesabın Oluşturulma Tarihi: \n • \` ${moment(member.user.createdAt).format("YYYY DD MMMM dddd (hh:mm:ss)")} \`
+ 
+ » • Ses teyit odasında kaydınızı yaptırabilirsiniz. 
+
+`)
+    .setImage('https://media.discordapp.net/attachments/757170096375464006/759101741480017970/ezgif.com-crop.gif')
+    .setTimestamp()
+    
+      client.channels.cache.find(x => x.id === kanal).send(`<@&${ayarlar.yetkiliROL}>`)
+client.channels.cache.find(x => x.id === kanal).send(giris)
+    
+    
+    // İSİM YAŞ İSİM DEĞİŞTİRME 
+
+client.on("guildMemberAdd", member => {
+  let tag = ayarlar.tag;
+  //
+  member.setNickname(`${tag} İsim • Yaş`);
+});
+
+// İSİM YAŞ İSİM DEĞİŞTİRME SON
+
+
+
+
+
+
+//BOT ROLÜ
+client.on(`guildMemberAdd`, async member => {
+  let botrol = ayarlar.botROL;
+if(!member.bot) return;
+member.roles.add(botrol)
+})
+
+// BOT ROLÜ SON
+
+
+
+
+// kayıtsız rolü
+
+client.on(`guildMemberAdd`, async member => {
+  let kayıtsızROL = ayarlar.kayıtsızROL;
+if(member.bot) return;
+member.roles.add(kayıtsızROL)
+})
+
+/// kayıtsız rolü son
+
+
+
+
+
+
+// BOT OTOROL
+
+client.on('guildMemberAdd', async member => {
+if(member.user.bot) {
+  const botROL = ayarlar.botROL
+member.roles.add(botROL)
+}
+})
+// GİRİŞ 
+  client.on("guildMemberAdd", member => { 
+    const moment = require('moment');
+  const kanal = ayarlar.giriskanal;
+  let user = client.users.cache.get(member.id);
+  require("moment-duration-format");
+    const tarih = new Date().getTime() - user.createdAt.getTime();  
+  const embed = new Discord.MessageEmbed()
+  let rol = ayarlar.kayıtsızROL
+ member.roles.add(rol)
+
+  var kontrol;
+if (tarih < 1296000000) kontrol = 'Bu Kullanıcı **Şüpheli**'
+if (tarih > 1296000000) kontrol = 'Bu Kullanıcı **Güvenli**'
+  moment.locale("tr");
+  let kanal1 = client.channels.cache.find(x => x.id === kanal);
+    let giris = new Discord.MessageEmbed()
+    .setDescription(`
+ » • Hoşgeldin **${member}**
+ 
+ » • Seninle birlikte **${member.guild.memberCount}** kişiyiz.
+ 
+ » • [ **${ayarlar.tag}** ] Tagımızı alarak ekibimize katılabilirsin.
+ 
+ » • <@&${ayarlar.yetkiliROL}> rolündekiler seninle ilgilenecektir.
+ 
+ » •   ${kontrol} 
+ 
+ » • Hesabın Oluşturulma Tarihi: \n • \` ${moment(member.user.createdAt).format("YYYY DD MMMM dddd (hh:mm:ss)")} \`
+ 
+ » • Ses teyit odasında kaydınızı yaptırabilirsiniz. 
+
+`)
+    .setImage('https://media.discordapp.net/attachments/757170096375464006/759101741480017970/ezgif.com-crop.gif')
+    .setTimestamp()
+    
+      client.channels.cache.find(x => x.id === kanal).send(`<@&${ayarlar.yetkiliROL}>`)
+client.channels.cache.find(x => x.id === kanal).send(giris)
+    
 });
 
 ///////////////////tag
